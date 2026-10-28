@@ -1,0 +1,455 @@
+{% extends "web/home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'web/css/tailwind2.css' %}">
+
+<div class="relative min-h-screen group-data-[sidebar-size=sm]:min-h-sm" style="background: whitesmoke; ">
+
+    <div class="group-data-[sidebar-size=lg]:ltr:md:ml-vertical-menu backB group-data-[sidebar-size=lg]:rtl:md:mr-vertical-menu group-data-[sidebar-size=md]:ltr:ml-vertical-menu-md group-data-[sidebar-size=md]:rtl:mr-vertical-menu-md group-data-[sidebar-size=sm]:ltr:ml-vertical-menu-sm group-data-[sidebar-size=sm]:rtl:mr-vertical-menu-sm pt-[calc(theme('spacing.header')_*_1)] pb-[calc(theme('spacing.header')_*_0.8)] px-4 group-data-[navbar=bordered]:pt-[calc(theme('spacing.header')_*_1.3)] group-data-[navbar=hidden]:pt-0 group-data-[layout=horizontal]:mx-auto group-data-[layout=horizontal]:max-w-screen-2xl group-data-[layout=horizontal]:px-0 group-data-[layout=horizontal]:group-data-[sidebar-size=lg]:ltr:md:ml-auto group-data-[layout=horizontal]:group-data-[sidebar-size=lg]:rtl:md:mr-auto group-data-[layout=horizontal]:md:pt-[calc(theme('spacing.header')_*_1.6)] group-data-[layout=horizontal]:px-3 group-data-[layout=horizontal]:group-data-[navbar=hidden]:pt-[calc(theme('spacing.header')_*_0.9)]">
+        <div class="container-fluid group-data-[content=boxed]:max-w-boxed mx-auto ">
+
+            <div class="flex flex-col gap-2 py-4 md:flex-row md:items-center print:hidden">
+                <div class="grow">
+                </div>
+                <ul class="flex items-center gap-2 text-sm font-normal shrink-0">
+                   
+                    <li class="text-slate-700 dark:text-zink-100">
+                        Contact Us
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto mb-16 text-center xl:w-2/5">
+                <h4 class="mb-2 txtW">Contact Us</h4>
+                <p class=" txtW">Janasahayakendram</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-2">
+                <div class="card" style="width: 100% !important;">
+                    <div class="!px-6 card-body flex flex-col h-full">
+
+                        <div class="mt-5 text-center">
+                            <h6 class="mb-2 text-16">Our Main Office</h6>
+                            <p class="mb-5 text-slate-500 dark:text-zink-200">Amrutha Building, 2nd Floor, High School Jn, Kalanjoor, pincode: 689 694, Pathanamthitta, Kerala, India</p>
+                        </div>
+                        <div class="mt-5 text-center">
+                            <h6 class="mb-2 text-16">Email & Phone</h6>
+                            <p class="mb-1 text-slate-500 dark:text-zink-200"><a href="mailto:janasahayakendram@gmail.com" class="color--theme">janasahayakendram@gmail.com</a></p>
+                            <p class="text-slate-500 dark:text-zink-200"><a href="tel:9497071145" class="color--theme">+91 9497071145  </a></p>
+                            <p class="mb-5 text-slate-500 dark:text-zink-200"><a href="tel:8304991136" class="color--theme">+91 8304991136 </a></p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3939.3537947783225!2d76.84918537502001!3d9.1224814909426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDcnMjAuOSJOIDc2wrA1MScwNi4zIkU!5e0!3m2!1sen!2sin!4v1716961613512!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div><!--end grid-->
+            <div class="card">
+                <div class="card-body">
+                    <div class="grid grid-cols-1 gap-5 xl:grid-cols-12">
+                        <div class="xl:col-span-3 bg-custom-900 card !mb-0 dark:bg-custom-950">
+                            <div class="flex flex-col h-full card-body">
+                                <div class="mb-6">
+                                    <h5 class="mb-2 text-white">Reach out to our business solution support team for assistance</h5>
+                                    <p class="text-custom-200">Are you an existing customer or do you require further assistance with support for <b>additional enquirys</b>?</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <ul class="flex flex-wrap items-center justify-center gap-2">
+                                        <li>
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded-md size-10 bg-custom-800/50 text-custom-300 hover:text-white dark:bg-custom-900/50">
+                                                <i data-lucide="facebook" class="size-5"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded-md size-10 bg-custom-800/50 text-custom-300 hover:text-white dark:bg-custom-900/50">
+                                                <i data-lucide="twitter" class="size-5"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded-md size-10 bg-custom-800/50 text-custom-300 hover:text-white dark:bg-custom-900/50">
+                                                <i data-lucide="mail" class="size-5"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded-md size-10 bg-custom-800/50 text-custom-300 hover:text-white dark:bg-custom-900/50">
+                                                <i data-lucide="globe" class="size-5"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded-md size-10 bg-custom-800/50 text-custom-300 hover:text-white dark:bg-custom-900/50">
+                                                <i data-lucide="instagram" class="size-5"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded-md size-10 bg-custom-800/50 text-custom-300 hover:text-white dark:bg-custom-900/50">
+                                                <i data-lucide="youtube" class="size-5"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                        <div class="xl:col-span-9">
+                            
+                            <form action="{% url 'web:contact' %}" method="post">
+                                {% csrf_token %}
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                                    <div>
+                                        <label for="full_name" class="inline-block mb-2 text-base font-medium">Full Name</label>
+                                        <input type="text" id="full_name" name="full_name" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter your Full Name" required>
+                                    </div>
+
+                                    <div>
+                                        <label for="email" class="inline-block mb-2 text-base font-medium">Email</label>
+                                        <input type="email" id="email" name="email" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter your Email" required>
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="inline-block mb-2 text-base font-medium">Phone</label>
+                                        <input type="number" name="phone" id="phone" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Phone no" required>
+                                    </div>
+                                    <div>
+                                        <label for="centre_name" class="inline-block mb-2 text-base font-medium">Centre Name</label>
+                                        <input type="text" name="centre_name" id="centre_name" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Company name" required>
+                                    </div>
+
+                                    <div>
+                                        <label for="state" class="inline-block mb-2 text-base font-medium">State</label>
+                                        <select id="state" name="state" onchange="populateDistricts()" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                                            <option hidden>State</option>
+                                            <option value="Rajasthan">Rajasthan</option>
+                                            <option value="MadhyaPradesh">Madhya Pradesh</option>
+                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="UttarPradesh">Uttar Pradesh</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="AndhraPradesh">Andhra Pradesh</option>
+                                            <option value="Odisha">Odisha</option>
+                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                            <option value="TamilNadu">Tamil Nadu</option>
+                                            <option value="Telangana">Telangana</option>
+                                            <option value="Bihar">Bihar</option>
+                                            <option value="WestBengal">West Bengal</option>
+                                            <option value="ArunachalPradesh">Arunachal Pradesh</option>
+                                            <option value="Jharkhand">Jharkhand</option>
+                                            <option value="Assam">Assam</option>
+                                            <option value="Ladakh">Ladakh</option>
+                                            <option value="HimachalPradesh">Himachal Pradesh</option>
+                                            <option value="Uttarakhand">Uttarakhand</option>
+                                            <option value="Punjab">Punjab</option>
+                                            <option value="Haryana">Haryana</option>
+                                            <option value="JammuandKashmir">Jammu and Kashmir</option>
+                                            <option value="Kerala">Kerala</option>
+                                            <option value="Meghalaya">Meghalaya</option>
+                                            <option value="Manipur">Manipur</option>
+                                            <option value="Mizoram">Mizoram</option>
+                                            <option value="Nagaland">Nagaland</option>
+                                            <option value="Tripura">Tripura</option>
+                                            <option value="AndamanandNicobarIslands">Andaman and Nicobar Islands</option>
+                                            <option value="Sikkim">Sikkim</option>
+                                            <option value="Goa">Goa</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="DadraandNagarHaveliandDamanandDiu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                            <option value="Puducherry">Puducherry</option>
+                                            <option value="Chandigarh">Chandigarh</option>
+                                            <option value="Lakshadweep">Lakshadweep</option>
+                                        </select>
+                                    
+                                    </div>
+
+                                    <div>
+                                        <label for="district" class="inline-block mb-2 text-base font-medium">District</label>
+                                        <select id="district" name="district" onchange="populateTaluks()" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                                            <option hidden>District</option>
+                                        </select>
+                                    
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="taluk" class="inline-block mb-2 text-base font-medium">Taluk</label>
+
+                                        <select id="taluk" name="taluk" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" required>
+                                            <option>Select Option</option>
+                                          </select>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="subject" class="inline-block mb-2 text-base font-medium">Subject</label>
+                                        <input type="text" name="subject" id="subject" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Subject" required>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label for="comments" class="inline-block mb-2 text-base font-medium">Comments</label>
+                                        <textarea name="comments" id="comments" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" id="" rows="5" id="inputSubject" placeholder="Enter comments"></textarea>
+                                    </div>
+                                </div>
+                                <div class="mt-5 ltr:text-right rtl:text-left">
+                                    <button type="submit" value="Submit" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!--end grid-->
+                </div>
+            </div><!--end card-->
+
+        </div>
+        <!-- container-fluid -->
+    </div>
+    <!-- End page-wrapper -->
+     
+
+
+</div>
+
+<script>
+    const stateSelect = document.getElementById('state');
+    const districtSelect = document.getElementById('district');
+    const talukSelect = document.getElementById('taluk');
+
+    // Define districts for each state
+    const districtsByState = {
+        Kerala: ['Thiruvananthapuram', 'Kollam', 'Alappuzha', 'Pathanamthitta', 'Kottayam', 'Idukki', 'Ernakulam', 'Thrissur', 'Palakkad', 'Malappuram', 'Kozhikode', 'Wayanad', 'Kannur', 'Kasaragod'],
+        TamilNadu: ['Ariyalur', 'Chennai', 'Coimbatore', 'Cuddalore', 'Dharmapuri', 'Dindigul', 'Erode', 'Kanchipuram', 'Kanyakumari', 'Karur', 'Krishnagiri', 'Madurai', 'Nagapattinam', 'Namakkal', 'Nilgiris', 'Perambalur', 'Pudukkottai', 'Ramanathapuram', 'Salem', 'Sivaganga', 'Tenkasi', 'Thanjavur', 'Theni', 'Thoothukudi', 'Tiruchirappalli', 'Tirunelveli', 'Tirupathur', 'Tiruppur', 'Tiruvallur', 'Tiruvannamalai', 'Tiruvarur', 'Vellore', 'Viluppuram', 'Virudhunagar', 'Chengalpattu', 'Ranipet', 'Tirupattur', 'Mayiladuthurai'],
+        AndamanandNicobarIslands: ['Nicobar', 'North and Middle Andaman', 'South Andaman'],
+        AndhraPradesh: ['Anantapur', 'Chittoor', 'EastGodavari', 'Guntur', 'Kadapa', 'Krishna', 'Kurnool', 'Prakasam', 'SriPottiSriramuluNellore', 'Srikakulam', 'Visakhapatnam', 'Vizianagaram', 'West Godavari'],
+        ArunachalPradesh: ['Anjaw', 'Changlang', 'Dibang Valley', 'East Kameng', 'East Siang', 'Kamle', 'Kra Daadi', 'Kurung Kumey', 'Lepa Rada', 'Lohit', 'Longding', 'Lower Dibang Valley', 'Lower Siang', 'Lower Subansiri', 'Namsai', 'Pakke Kessang', 'Papum Pare', 'Shi Yomi', 'Siang', 'Tawang', 'Tirap', 'Upper Siang', 'Upper Subansiri', 'West Kameng', 'West Siang'],
+        Assam: ['Baksa', 'Barpeta', 'Biswanath', 'Bongaigaon', 'Cachar', 'Charaideo', 'Chirang', 'Darrang', 'Dhemaji', 'Dhubri', 'Dibrugarh', 'Dima Hasao', 'Goalpara', 'Golaghat', 'Hailakandi', 'Hojai', 'Jorhat', 'Kamrup', 'Kamrup Metropolitan', 'Karbi Anglong', 'Karimganj', 'Kokrajhar', 'Lakhimpur', 'Majuli', 'Morigaon', 'Nagaon', 'Nalbari', 'Sivasagar', 'Sonitpur', 'South Salmara-Mankachar', 'Tinsukia', 'Udalguri', 'West Karbi Anglong'],
+        Bihar: ['Araria', 'Arwal', 'Aurangabad', 'Banka', 'Begusarai', 'Bhagalpur', 'Bhojpur', 'Buxar', 'Darbhanga', 'East Champaran', 'Gaya', 'Gopalganj', 'Jamui', 'Jehanabad', 'Kaimur', 'Katihar', 'Khagaria', 'Kishanganj', 'Lakhisarai', 'Madhepura', 'Madhubani', 'Munger', 'Muzaffarpur', 'Nalanda', 'Nawada', 'Patna', 'Purnia', 'Rohtas', 'Saharsa', 'Samastipur', 'Saran', 'Sheikhpura', 'Sheohar', 'Sitamarhi', 'Siwan', 'Supaul', 'Vaishali', 'West Champaran'],
+        Chandigarh: ['Chandigarh'],
+        Chhattisgarh: ['Balod', 'Baloda Bazar', 'Balrampur', 'Bastar', 'Bemetara', 'Bijapur', 'Bilaspur', 'Dantewada', 'Dhamtari', 'Durg', 'Gariaband', 'Gaurela Pendra Marwahi', 'Janjgir Champa', 'Jashpur', 'Kabirdham', 'Kanker', 'Kondagaon', 'Korba', 'Koriya', 'Mahasamund', 'Mungeli', 'Narayanpur', 'Raigarh', 'Raipur', 'Rajnandgaon', 'Sukma', 'Surajpur', 'Surguja'],
+        DadraandNagarHaveliandDamanandDiu: ['Dadra and Nagar Haveli', 'Daman', 'Diu'],
+        Delhi: ['Central Delhi', 'East Delhi', 'New Delhi', 'North Delhi', 'North East Delhi', 'North West Delhi', 'Shahdara', 'South Delhi', 'South East Delhi', 'South West Delhi', 'West Delhi'],
+        Goa: ['NorthGoa', 'SouthGoa'],
+        Gujarat: ['Ahmedabad', 'Amreli', 'Anand', 'Aravalli', 'Banaskantha', 'Bharuch', 'Bhavnagar', 'Botad', 'Chhota Udaipur', 'Dahod', 'Dang', 'Devbhoomi Dwarka', 'Gandhinagar', 'Gir Somnath', 'Jamnagar', 'Junagadh', 'Kheda', 'Kutch', 'Mahisagar', 'Mehsana', 'Morbi', 'Narmada', 'Navsari', 'Panchmahal', 'Patan', 'Porbandar', 'Rajkot', 'Sabarkantha', 'Surat', 'Surendranagar', 'Tapi', 'Vadodara', 'Valsad'],
+        Haryana: ['Ambala', 'Bhiwani', 'Charkhi Dadri', 'Faridabad', 'Fatehabad', 'Gurugram', 'Hisar', 'Jhajjar', 'Jind', 'Kaithal'],
+        HimachalPradesh: ['Bilaspur', 'Chamba', 'Hamirpur', 'Kangra', 'Kinnaur', 'Kullu', 'Lahaul and Spiti', 'Mandi', 'Shimla', 'Sirmaur', 'Solan', 'Una'],
+        JammuandKashmir: ['Anantnag', 'Bandipora', 'Baramulla', 'Budgam', 'Doda', 'Ganderbal', 'Jammu', 'Kathua', 'Kishtwar', 'Kulgam', 'Kupwara', 'Poonch', 'Pulwama', 'Rajouri', 'Ramban', 'Reasi', 'Samba', 'Shopian', 'Srinagar', 'Udhampur'],
+        Jharkhand: ['Bokaro', 'Chatra', 'Deoghar', 'Dhanbad', 'Dumka', 'East Singhbhum', 'Garhwa', 'Giridih', 'Godda', 'Gumla', 'Hazaribagh', 'Jamtara', 'Khunti', 'Koderma', 'Latehar', 'Lohardaga', 'Pakur', 'Palamu', 'Ramgarh', 'Ranchi', 'Sahibganj', 'Seraikela Kharsawan', 'Simdega', 'West Singhbhum'],
+        Karnataka: ['Bagalkot', 'Ballari', 'Belagavi', 'Bengaluru Rural', 'Bengaluru Urban', 'Bidar', 'Chamarajanagar', 'Chikkaballapur', 'Chikkamagaluru', 'Chitradurga', 'Dakshina Kannada', 'Davanagere', 'Dharwad', 'Gadag', 'Hassan', 'Haveri', 'Kalaburagi', 'Kodagu', 'Kolar', 'Koppal', 'Mandya', 'Mysuru', 'Raichur', 'Ramanagara', 'Shivamogga', 'Tumakuru', 'Udupi', 'Uttara Kannada', 'Vijayapura', 'Yadgir'],
+        Ladakh: ['Kargil', 'Leh'],
+        Lakshadweep: ['Agatti', 'Amini', 'Androth', 'Bithra', 'Chetlat', 'Kadmath', 'Kalpeni', 'Kavaratti', 'Kiltan', 'Minicoy'],
+        MadhyaPradesh: ['Agar Malwa', 'Alirajpur', 'Anuppur', 'Ashoknagar', 'Balaghat', 'Barwani', 'Betul', 'Bhind', 'Bhopal', 'Burhanpur', 'Chhatarpur', 'Chhindwara', 'Damoh', 'Datia', 'Dewas', 'Dhar', 'Dindori', 'Guna', 'Gwalior', 'Harda', 'Hoshangabad', 'Indore', 'Jabalpur', 'Jhabua', 'Katni', 'Khandwa', 'Khargone', 'Mandla', 'Mandsaur', 'Morena', 'Narsinghpur', 'Neemuch', 'Panna', 'Raisen', 'Rajgarh', 'Ratlam', 'Rewa', 'Sagar', 'Satna', 'Sehore', 'Seoni', 'Shahdol', 'Shajapur', 'Sheopur', 'Shivpuri', 'Sidhi', 'Singrauli', 'Tikamgarh', 'Ujjain', 'Umaria', 'Vidisha'],
+        Maharashtra: ['Ahmednagar', 'Akola', 'Amravati', 'Aurangabad', 'Beed', 'Bhandara', 'Buldhana', 'Chandrapur', 'Dhule', 'Gadchiroli', 'Gondia', 'Hingoli', 'Jalgaon', 'Jalna', 'Kolhapur', 'Latur', 'Mumbai City', 'Mumbai Suburban', 'Nagpur', 'Nanded', 'Nandurbar', 'Nashik', 'Osmanabad', 'Palghar', 'Parbhani', 'Pune', 'Raigad', 'Ratnagiri', 'Sangli', 'Satara', 'Sindhudurg', 'Solapur', 'Thane', 'Wardha', 'Washim', 'Yavatmal'],
+        Manipur: ['Bishnupur', 'Chandel', 'Churachandpur', 'Imphal East', 'Imphal West', 'Jiribam', 'Kakching', 'Kamjong', 'Kangpokpi', 'Noney', 'Pherzawl', 'Senapati', 'Tamenglong', 'Tengnoupal', 'Thoubal', 'Ukhrul'],
+        Meghalaya: ['East Garo Hills', 'East Jaintia Hills', 'East Khasi Hills', 'North Garo Hills', 'Ri Bhoi', 'South Garo Hills', 'South West Garo Hills', 'South West Khasi Hills', 'West Garo Hills', 'West Jaintia Hills', 'West Khasi Hills'],
+        Mizoram: ['Aizawl', 'Champhai', 'Hnahthial', 'Khawzawl', 'Kolasib', 'Lawngtlai', 'Lunglei', 'Mamit', 'Saiha', 'Saitual', 'Serchhip'],
+        Nagaland: ['Dimapur', 'Kiphire', 'Kohima', 'Longleng', 'Mokokchung', 'Mon', 'Peren', 'Phek', 'Tuensang', 'Wokha', 'Zunheboto'],
+        Odisha: ['Angul', 'Balangir', 'Balasore', 'Bargarh', 'Bhadrak', 'Boudh', 'Cuttack', 'Debagarh', 'Dhenkanal', 'Gajapati', 'Ganjam', 'Jagatsinghpur', 'Jajpur', 'Jharsuguda', 'Kalahandi', 'Kandhamal', 'Kendrapara', 'Kendujhar', 'Khordha', 'Koraput', 'Malkangiri', 'Mayurbhanj', 'Nabarangpur', 'Nayagarh', 'Nuapada', 'Puri', 'Rayagada', 'Sambalpur', 'Subarnapur', 'Sundargarh'],
+        Puducherry: ['Karaikal', 'Mahe', 'Puducherry', 'Yanam'],
+        Punjab: ['Amritsar', 'Barnala', 'Bathinda', 'Faridkot', 'Fatehgarh Sahib', 'Fazilka', 'Ferozepur', 'Gurdaspur', 'Hoshiarpur', 'Jalandhar', 'Kapurthala', 'Ludhiana', 'Mansa', 'Moga', 'Muktsar', 'Pathankot', 'Patiala', 'Rupnagar', 'Sahibzada Ajit Singh Nagar', 'Sangrur', 'Shaheed Bhagat Singh Nagar', 'Sri Muktsar Sahib', 'Tarn Taran'],
+        Rajasthan: ['Ajmer', 'Alwar', 'Banswara', 'Baran', 'Barmer', 'Bharatpur', 'Bhilwara', 'Bikaner', 'Bundi', 'Chittorgarh', 'Churu', 'Dausa', 'Dholpur', 'Dungarpur', 'Hanumangarh', 'Jaipur', 'Jaisalmer', 'Jalore', 'Jhalawar', 'Jhunjhunu', 'Jodhpur', 'Karauli', 'Kota', 'Nagaur', 'Pali', 'Pratapgarh', 'Rajsamand', 'Sawai Madhopur', 'Sikar', 'Sirohi', 'Sri Ganganagar', 'Tonk', 'Udaipur'],
+        Sikkim: ['East Sikkim', 'North Sikkim', 'South Sikkim', 'West Sikkim'],
+        Telangana: ['Adilabad', 'Bhadradri Kothagudem', 'Hyderabad', 'Jagtial', 'Jangaon', 'Jayashankar Bhupalpally', 'Jogulamba Gadwal', 'Kamareddy', 'Karimnagar', 'Khammam', 'Komaram Bheem', 'Mahabubabad', 'Mahabubnagar', 'Mancherial', 'Medak', 'Medchal-Malkajgiri', 'Mulugu', 'Nagarkurnool', 'Nalgonda', 'Narayanpet', 'Nirmal', 'Nizamabad', 'Peddapalli', 'Rajanna Sircilla', 'Rangareddy', 'Sangareddy', 'Siddipet', 'Suryapet', 'Vikarabad', 'Wanaparthy', 'Warangal Rural', 'Warangal Urban', 'Yadadri Bhuvanagiri'],
+        Tripura: ['Dhalai', 'Gomati', 'Khowai', 'North Tripura', 'Sepahijala', 'South Tripura', 'Unakoti', 'West Tripura'],
+        Uttarakhand: ['Almora', 'Bageshwar', 'Chamoli', 'Champawat', 'Dehradun', 'Haridwar', 'Nainital', 'Pauri Garhwal', 'Pithoragarh', 'Rudraprayag', 'Tehri Garhwal', 'Udham Singh Nagar', 'Uttarkashi'],
+        WestBengal: ['Alipurduar', 'Bankura', 'Birbhum', 'Cooch Behar', 'Dakshin Dinajpur', 'Darjeeling', 'Hooghly', 'Howrah', 'Jalpaiguri', 'Jhargram', 'Kalimpong', 'Kolkata', 'Malda', 'Murshidabad', 'Nadia', 'North 24 Parganas', 'Paschim Bardhaman', 'Paschim Medinipur', 'Purba Bardhaman', 'Purba Medinipur', 'Purulia', 'South 24 Parganas', 'Uttar Dinajpur'],
+        UttarPradesh: ['Agra', 'Aligarh', 'Ambedkar Nagar', 'Amethi', 'Amroha', 'Auraiya', 'Ayodhya', 'Azamgarh', 'Baghpat', 'Bahraich', 'Ballia', 'Balrampur', 'Banda', 'Barabanki', 'Bareilly', 'Basti', 'Bhadohi', 'Bijnor', 'Budaun', 'Bulandshahr', 'Chandauli', 'Chitrakoot', 'Deoria', 'Etah', 'Etawah', 'Farrukhabad', 'Fatehpur', 'Firozabad', 'Gautam Buddh Nagar', 'Ghaziabad', 'Ghazipur', 'Gonda', 'Gorakhpur', 'Hamirpur', 'Hapur', 'Hardoi', 'Hathras', 'Jalaun', 'Jaunpur', 'Jhansi', 'Kannauj', 'Kanpur Dehat', 'Kanpur Nagar', 'Kasganj', 'Kaushambi', 'Kushinagar', 'Lakhimpur Kheri', 'Lalitpur', 'Lucknow', 'Maharajganj', 'Mahoba', 'Mainpuri', 'Mathura', 'Mau', 'Meerut', 'Mirzapur', 'Moradabad', 'Muzaffarnagar', 'Pilibhit', 'Pratapgarh', 'Prayagraj (formerly Allahabad)', 'Raebareli', 'Rampur', 'Saharanpur', 'Sambhal', 'Sant Kabir Nagar', 'Shahjahanpur', 'Shamli', 'Shravasti', 'Siddharthnagar', 'Sitapur', 'Sonbhadra', 'Sultanpur', 'Unnao', 'Varanasi'],
+
+        // Add s for other states here
+
+    };
+
+
+    // Define taluks for each district
+    const taluksByDistrict = {
+        // Kerala
+        Thiruvananthapuram: ['Thiruvananthapuram', 'Nedumangadu', 'Chirayinkeezhu', 'Kattakada', 'Neyyattinkara', 'Varkala'],
+        Kollam: ['Kollam', 'Kunnathur', 'Karunagappally', 'Kottarakkara', 'Pathanapuram', 'Punalur'],
+        Alappuzha: ['Cherthala', 'Ambalappuzha', 'Kuttanadu', 'Karthikappally', 'Chengannur', 'Mavelikkara'],
+        Pathanamthitta: ['Thiruvalla ', 'Mallappally ', 'Ranni ', 'Kozhencherry ', 'Adoor ', 'Konni'],
+        Kottayam: ['Kottayam', 'Changanacherry', 'Vaikom', 'Kanjirapally ', 'Meenachil '],
+        Idukki: ['Devikulam', 'Udumbanchola', 'Thodupuzha', 'Peerumade ', 'Idukki'],
+        Ernakulam: ['Paravur', 'Aluva', 'Kochi', 'Kanayannoor', 'Muvattupuzha', 'Kunnathunadu', 'Kothamangalam '],
+        Thrissur: ['Chavakkad', 'Kodungallur', 'Mukundapuram', '	Talappilly', '	Thrissur'],
+        Palakkad: ['Alathur', 'Chittur', 'Mannarkkad', 'Ottappalam', 'Palakkad', 'Pattambi'],
+        Malappuram: ['Ernad', 'Perinthalmanna', 'Tirur', 'Ponnani', 'Tirurangadi', 'Nilambur ', 'Kondotty'],
+        Kozhikode: ['Kozhikode', 'Vatakara', 'Koyilandy ', 'Thamarassery'],
+        Wayanad: ['Vythiri', 'Manathavady ', 'Sulthanbathery '],
+        Kannur: ['Thalasseri', 'Kannur', 'Thaliparamba', 'Payyannur ', 'Iritty'],
+        Kasaragod: ['Kasargod', 'Hosdurg', 'Manjeshwaram', 'Vellarikundu'],
+
+        // Tamil Nadu
+        Ariyalur: ['Ariyalur', 'Sendurai', 'Udayarpalayam'],
+        Chennai: ['Alandur', 'Ambattur', 'Aminjikarai', 'Ayanavaram', 'Egmore', 'Guindy', 'Kodambakkam', 'Kolathur', 'Madhavaram', 'Maduravoyal', 'Mambalam', 'Mylapore', 'Perambur', 'Purasawalkam', 'Royapuram', 'Saidapet', 'Teynampet', 'Thiruvika Nagar', 'Thousand Lights', 'Tondiarpet', 'Velachery', 'Villivakkam'],
+        Coimbatore: ['Anaimalai', 'Kottur-Malayandipattinam', 'Palladam', 'Pollachi', 'Sulur', 'Tiruppur', 'Udumalpet'],
+        Cuddalore: ['Chidambaram', 'Cuddalore', 'Kattumannarkoil', 'Panruti', 'Tittakudi', 'Vriddhachalam'],
+        Dharmapuri: ['Dharmapuri', 'Harur', 'Palacode', 'Pennagaram'],
+        Dindigul: ['Athoor', 'Dindigul', 'Kodaikanal', 'Natham', 'Nilakkottai', 'Oddanchatram', 'Palani', 'Reddiarchatiram', 'Vedasandur'],
+        Erode: ['Anthiyur', 'Bhavani', 'Erode', 'Gobichettipalayam', 'Perundurai', 'Sathyamangalam'],
+        Kanchipuram: ['Chengalpattu', 'Cheyyur', 'Kancheepuram', 'Maduranthakam', 'Sriperumbudur', 'Tambaram', 'Thiruporur', 'Uthiramerur'],
+        Kanyakumari: ['Agastheeswaram', 'Kalkulam', 'Thovalai', 'Vilavancode'],
+        Karur: ['Aravakurichi', 'Karur', 'Krishnarayapuram', 'Kulithalai'],
+        Krishnagiri: ['Bargur', 'Hosur', 'Krishnagiri', 'Pochampalli', 'Uthangarai'],
+        Madurai: ['Kallikudi', 'Madurai East', 'Madurai North', 'Madurai South', 'Melur', 'Peraiyur', 'Tirupparangunram', 'Usilampatti', 'Vadipatti'],
+        Nagapattinam: ['Kilvelur', 'Mayiladuthurai', 'Nagapattinam', 'Sirkali', 'Tharangambadi', 'Vedaranyam'],
+        Namakkal: ['Namakkal', 'Paramathi-Velur', 'Rasipuram', 'Tiruchengode'],
+        Nilgiris : ['Coonoor', 'Gudalur', 'Kotagiri', 'Udhagamandalam'],
+        Perambalur: ['Kunnam', 'Perambalur', 'Veppanthattai'],
+        Pudukkottai: ['Alangudi', 'Aranthangi', 'Avadaiyarkovil', 'Gandarvakottai', 'Illuppur', 'Karambakudi', 'Kulathur', 'Manamelkudi', 'Ponnamaravathi', 'Thirumayam', 'Viralimalai'],
+        Ramanathapuram: ['Kadaladi', 'Kamuthi', 'Mudukulathur', 'Paramakudi', 'Ramanathapuram', 'Rameswaram', 'Tiruvadanai'],
+        Salem: ['Attur', 'Edappadi', 'Gangavalli', 'Mettur', 'Omalur', 'Salem', 'Sankagiri', 'Valapady', 'Veera Rakavan Kottai', 'Yercaud'],
+        Sivaganga: ['Devakottai', 'Karaikkudi', 'Manamadurai', 'Sivaganga', 'Tirupathur'],
+        Tenkasi: ['Alangulam', 'Kadayanallur', 'Sankarankovil', 'Shenkottai', 'Sivagiri', 'Tenkasi', 'Vasudevanallur'],
+        Thanjavur: ['Budalur', 'Kumbakonam', 'Orathanadu', 'Papanasam', 'Pattukkottai', 'Peravurani', 'Thanjavur', 'Thiruvaiyaru', 'Thiruvidaimarudur'],
+        Theni: ['Andipatti', 'Bodinayakanur', 'Periyakulam', 'Theni'],
+        Thoothukudi: ['Kovilpatti', 'Ottapidaram', 'Sathankulam', 'Srivaikuntam', 'Thoothukudi', 'Tiruchendur', 'Vilathikulam'],
+        Tiruchirappalli: ['Lalgudi', 'Manachanallur', 'Manapparai', 'Musiri', 'Srirangam', 'Thiruverumbur', 'Tiruchirappalli'],
+        Tirunelveli: ['Alangulam', 'Ambasamudram', 'Nanguneri', 'Palayamkottai', 'Radhapuram', 'Sankarankoil', 'Sengottai', 'Tirunelveli', 'Veerakeralamputhur'],
+        Tirupathur: ['Alangayanallur', 'Melur', 'Tiruparankundram', 'Tiruporur', 'Tiruppur', 'Tiruttani'],
+        Tiruppur: ['Avinashi', 'Madathukulam', 'Palladam', 'Tiruppur', 'Udumalaipettai'],
+        Tiruvallur: ['Ambattur', 'Gummidipoondi', 'Pallipattu', 'Ponneri', 'Thiruvallur', 'Tiruttani', 'Uthukkottai'],
+        Tiruvannamalai: ['Arani', 'Cheyyar', 'Chengam', 'Polur', 'Tiruvannamalai', 'Vandavasi'],
+        Tiruvarur: ['Kodavasal', 'Koothanallur', 'Mannargudi', 'Needamangalam', 'Thiruvarur', 'Valangaiman'],
+        Vellore: ['Arakonam', 'Arcot', 'Gudiyatham', 'Katpadi', 'Tirupathur', 'Vaniyambadi', 'Vellore','Wallajah'],
+        
+        // Karnataka
+        Bagalkot: ['Bagalkot', 'Ilkal','Badami','Hunagunda','Mudhol', 'Jamkhandi','Bilgi','Rabkavi Banhatti','Terdal','Guledgudda' ],
+        Ballari: ['Ballari', 'Siruguppa','Hospet','Kudligi','Sandur','Hadagali','Hagaribommanahalli'],
+        Belagavi: ['Athani', 'Bailahongal', 'Belagavi', 'Chikkodi', 'Gokak', 'Hukkeri', 'Khanapur', 'Ramdurg', 'Raybag', 'Saundatti'],
+        BengaluruRural: ['Devanahalli', 'Doddaballapura', 'Hosakote', 'Nelamangala'],
+        BengaluruUrban: ['Bengaluru East', 'Bengaluru North', 'Bengaluru South', 'Bengaluru West'],
+        Bidar: ['Aurad', 'Basavakalyan', 'Bhalki', 'Bidar', 'Homnabad'],
+        Chamarajanagar: ['Chamarajanagar', 'Gundlupet', 'Kollegal'],
+        Chikballapur: ['Bagepalli', 'Chikballapur', 'Chintamani', 'Gauribidanur', 'Gudibande', 'Sidlaghatta'],
+        Chikkamagaluru: ['Chikkamagaluru', 'Kadur', 'Koppa', 'Mudigere', 'Narasimharajapura', 'Sringeri', 'Tarikere'],
+        Chitradurga: ['Challakere', 'Chitradurga', 'Holalkere', 'Hosadurga', 'Molakalmuru'],
+        DakshinaKannada: ['Bantwal', 'Belthangady', 'Mangaluru', 'Puttur', 'Sullia'],
+        Davangere: ['Channagiri', 'Davanagere', 'Harihar', 'Jagalur'],
+        Dharwad: ['Annigeri', 'Dharwad', 'Hubballi', 'Kalghatgi', 'Kundgol', 'Navalgund'],
+        Gadag: ['Gadag-Betigeri', 'Mundargi', 'Nargund', 'Ron', 'Shirhatti'],
+        Hassan: ['Alur', 'Arsikere', 'Belur', 'Channarayapatna', 'Hassan', 'Holenarasipura', 'Sakleshpur'],
+        Haveri: ['Byadgi', 'Hangal', 'Haveri', 'Hirekerur', 'Ranibennur', 'Savanur', 'Shiggaon'],
+        Kalaburagi: ['Afzalpur', 'Aland', 'Chincholi', 'Chitapur', 'Gurmitkal', 'Kalaburagi Rural', 'Kalaburagi Urban', 'Sedam', 'Shahabad'],
+        Kodagu: ['Madikeri', 'Somwarpet', 'Virajpet'],
+        Kolar: ['Bangarapet', 'Kolar', 'Malur', 'Mulbagal', 'Srinivaspur'],
+        Koppal: ['Gangawati', 'Koppal', 'Kushtagi', 'Yelbarga'],
+        Mandya: ['K.R. Pet', 'Maddur', 'Malavalli', 'Mandya', 'Nagamangala', 'Pandavapura', 'Srirangapatna'],
+        Mysuru: ['Heggadadevankote', 'Hunsur', 'Krishnarajanagara', 'Mysuru East', 'Mysuru North', 'Mysuru South', 'Nanjangud', 'Piriyapatna', 'T. Narasipur'],
+        Raichur: ['Devadurga', 'Lingsugur', 'Manvi', 'Raichur', 'Sindhnur'],
+        Ramanagara: ['Channapatna', 'Kanakapura', 'Magadi', 'Ramanagara'],
+        Shivamogga: ['Bhadravathi', 'Hosanagara', 'Sagara', 'Shikaripura', 'Shivamogga', 'Sorab', 'Thirthahalli'],
+        Tumakuru: ['Chiknayakanhalli', 'Gubbi', 'Koratagere', 'Kunigal', 'Madhugiri', 'Pavagada', 'Sira', 'Tiptur', 'Tumakuru'],
+        Udupi: ['Karkal', 'Kundapura', 'Udupi'],
+        UttaraKannada: ['Ankola', 'Bhatkal', 'Haliyal', 'Honnavar', 'Karwar', 'Kumta', 'Mundgod', 'Siddapur', 'Sirsi', 'Yellapur'],
+        Vijayapura: ['Basavana Bagevadi', 'Babaleshwar', 'Indi', 'Muddebihal', 'Sindagi', 'Talikota', 'Vijayapura'],
+        Yadgir: ['Gurmatkal', 'Shahapur', 'Surpur', 'Yadgir'],
+        
+        // Chandigarh
+        Chandigarh: ['Dhanas','Kaimbwala','Raipur Kalan and Makhan Majra', 'Raipur Khurd', 'Sarangpur'],
+
+        // Goa
+        NorthGoa: ['Bardez','Pernem','Bicholim','Sattari','Ponda','Tiswadi'],
+        SouthGoa: ['Canacona','Mormugao','Salcette','Sanguem','Quepem','Dharbandora'],
+
+        // Gujarat
+        Ahmedabad: ['Ahmadabad', 'Bavla', 'Daskroi', 'Detroj-Rampura', 'Dhandhuka', 'Dholera', 'Dholka', 'Mandal', 'Sanand', 'Viramgam'],
+        Amreli: ['Amreli', 'Babra', 'Bagasara', 'Dhari', 'Jafrabad', 'Khambha', 'Kunkavav vadia', 'Lathi', 'Lilia', 'Rajula', 'Savarkundla'] ,
+        Anand: ['Anand', 'Anklav', 'Borsad', 'Khambhat', 'Petlad', 'Sojitra', 'Tarapur', 'Umreth'],
+        Aravalli: ['Bayad', 'Bhiloda', 'Dhansura', 'Malpur', 'Meghraj', 'Modasa'],
+        Banaskantha: ['Amirgadh', 'Bhabhar', 'Danta', 'Dantiwada', 'Deesa', 'Deodar', 'Dhanera','Kankrej', 'Lakhani', 'Palanpur', 'Suigam', 'Tharad', 'Vadgam', 'Vav'],
+        Bharuch: ['Bharuch', 'Amod', 'Ankleshwar', 'Hansot', 'Jambusar', 'Jhagadia', 'Netrang', 'Vagra', 'Valia'],
+        Bhavnagar: ['Bhavnagar', 'Gariadhar', 'Ghogha', 'Jesar', 'Mahuva','Palitana', 'Sihor', 'Talaja', 'Umrala', 'Vallabhipur'],
+        Botad: ['Botad', 'Barwala', 'Gadhada', 'Ranpur'],
+        ChhotaUdaipur: ['Chhota Udaipur', 'Bodeli', 'Jetpur pavi', 'Kavant', 'Nasvadi', 'Sankheda'],
+        Dahod: ['Dahod', 'Devgadh baria', 'Dhanpur', 'Fatepura','Garbada', 'Limkheda', 'Sanjeli', 'Jhalod', 'Singvad'],
+        Dang: ['Ahwa', 'Subir', 'Waghai'],
+        DevbhoomiDwarka: ['Bhanvad', 'Kalyanpur', 'Khambhalia', 'Okhamandal'],
+        Gandhinagar: ['Gandhinagar', 'Dehgam', 'Kalol', 'Mansa'],
+        GirSomnath: ['Gir-Gadhada', 'Kodinar', 'Sutrapada', 'Talala', 'Una', 'Patan-Veraval'],
+        Jamnagar: ['Jamnagar', 'Dhrol', 'Jamjodhpur', 'Jodiya', 'Kalavad', 'Lalpur'],
+        Junagadh: ['Junagadh City', 'Bhesana', 'Junagadh Rural', 'Keshod', 'Malia', 'Manavadar', 'Mangrol', 'Mendarda', 'Vanthali', 'Visavadar'],
+        Kheda: ['Kheda', 'Galteshwar', 'Kapadvanj', 'Kathlal', 'Mahudha', 'Matar', 'Mehmedabad', 'Nadiad', 'Thasra', 'Vaso'],
+        Kutch: ['Abdasa', 'Anjar', 'Bhachau', 'Bhuj', 'Gandhidham', 'Lakhpat', 'Mandvi', 'Mundra', 'Nakhatrana', 'Rapar'],
+        Mahisagar: ['Balasinor', 'Kadana', 'Khanpur', 'Lunawada', 'Santrampur', 'Virpur'],
+        Mehsana: ['Mehsana', 'Becharaji', 'Jotana', 'Kadi', 'Kheralu','Satlasana', 'Unjha', 'Vadnagar', 'Vijapur', 'Visnagar'],
+        Morbi: ['Halvad', 'Maliya', 'Morbi', 'Tankara', 'Wankaner'],
+        Narmada: ['Dediapada', 'Garudeshwar', 'Nandod', 'Sagbara', 'Tilakwada'],
+        Navsari: ['Navsari', 'Vansda', 'Chikhli', 'Gandevi', 'Jalalpore', 'Khergam'],
+        Panchmahal: ['Ghoghamba', 'Godhra', 'Halol', 'Jambughoda', 'Kalol', 'Morwa Hadaf', 'Shehera'],
+        Patan: ['Patan', 'Chanasma', 'Harij', 'Radhanpur', 'Sami', 'Sankheswar', 'Santalpur', 'Sarasvati', 'Sidhpur'],
+        Porbandar: ['Porbandar', 'Kutiyana', 'Ranavav'],
+        Rajkot: ['Rajkot', 'Dhoraji', 'Gondal', 'Jamkandorna', 'Jasdan','Jetpur', 'Kotada Sangani', 'Lodhika', 'Paddhari', 'Upleta', 'Vinchchiya'],
+        Sabarkantha: ['Himatnagar', 'Idar', 'Khedbrahma', 'Poshina', 'Prantij', 'Talod', 'Vadali', 'Vijaynagar'],
+        Surat: ['Surat', 'Bardoli', 'Choryasi', 'Kamrej', 'Mahuva','Mandvi', 'Mangrol', 'Olpad', 'Palsana', 'Umarpada'],
+        Surendranagar: ['Chotila', 'Chuda', 'Dasada', 'Dhrangadhra', 'Lakhtar','Limbdi', 'Muli', 'Sayla', 'Thangadh', 'Wadhwan'],
+        Tapi:  ['Nizar', 'Songadh', 'Uchhal', 'Valod', 'Vyara', 'Kukarmunda', 'Dolvan'],
+        Vadodara: ['Vadodara', 'Dabhoi', 'Desar', 'Karjan', 'Padra', 'Savli', 'Sinor', 'Waghodia'],
+        Valsad: ['Valsad', 'Dharampur', 'Kaprada', 'Pardi', 'Umbergaon', 'Vapi'],
+
+        // Andhra Pradesh
+        Anantapur: ['Anantapur','Dharmavaram','Gooty','Kadiri','Kalyandurg','Rayadurg','Tadipatri'],
+        Chittoor: ['Chittoor','Madanapalle','Tirupati (Urban)','Tirupati (Rural)','Palamaner','Punganur'],
+        EastGodavari: ['Amalapuram','Kakinada (Urban)','Kakinada (Rural)','Rajahmundry (Urban)','Rajahmundry (Rural)'],
+        Guntur : ['Guntur (Urban)','Guntur (Rural)','Narasaraopet','Tenali'],
+        Kadapa : ['Kadapa','Jammalamadugu','Proddatur','Rajampet'],
+        Krishna : ['Gudivada','Machilipatnam','Nandigama','Vijayawada (Urban)','Vijayawada (Rural)'],
+        Kurnool : ['Adoni','Kurnool','Nandyal','Yemmiganur'],
+        Prakasam : ['Chirala','Markapur','Ongole','Kandukur'],
+        SriPottiSriramuluNellore :['Gudur','Kavali','Nellore','Sullurpeta'],
+        Srikakulam :['Palasa','Rajam','Srikakulam','Tekkali'],
+        Visakhapatnam : ['Anakapalle','Paderu','Narsipatnam','Visakhapatnam (Urban)','Visakhapatnam (Rural)'],
+        Vizianagaram :['Bobbili','Parvathipuram','Vizianagaram','Salur'],
+        WestGodavari : ['Bhimavaram','Eluru','Narasapuram','Tadepalligudem'],
+        
+        // Define taluks for other districts here
+    };
+
+    // Function to populate districts based on selected state
+    function populateDistricts() {
+        const selectedState = stateSelect.value;
+        const districts = districtsByState[selectedState] || [];
+
+        // Clear existing options
+        districtSelect.innerHTML = '<option hidden>Select District</option>';
+
+        // Add new options
+        districts.forEach(district => {
+            const option = document.createElement('option');
+            option.textContent = district;
+            districtSelect.appendChild(option);
+        });
+
+        // Populate taluks based on selected district
+        populateTaluks();
+    }
+
+    // Function to populate taluks based on selected district
+    function populateTaluks() {
+        const selectedDistrict = districtSelect.value;
+        const taluks = taluksByDistrict[selectedDistrict] || [];
+
+        // Clear existing options
+        talukSelect.innerHTML = '<option hidden>Select Taluk</option>';
+
+        // Add new options
+        taluks.forEach(taluk => {
+            const option = document.createElement('option');
+            option.textContent = taluk;
+            talukSelect.appendChild(option);
+        });
+    }
+
+    // Initial population of districts
+    populateDistricts();
+</script>
+
+
+
+<script src="{% static 'web/libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+<script src="{% static 'web/libs/%40popperjs/core/umd/popper.min.js' %}"></script>
+<script src="{% static 'web/libs/tippy.js/tippy-bundle.umd.min.js' %}"></script>
+<script src="{% static 'web/libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'web/libs/prismjs/prism.js' %}"></script>
+<script src="{% static 'web/libs/lucide/umd/lucide.js' %}"></script>
+<script src="{% static 'web/js/tailwick.bundle.js' %}"></script>
+<!--apexchart js-->
+<script src="{% static 'web/libs/apexcharts/apexcharts.min.js' %}"></script>
+
+<!--dashboard analytics init js-->
+<script src="{% static 'web/js/pages/dashboards-analytics.init.js' %}"></script>
+
+<!-- App js -->
+<script src="{% static 'web/js/app.js' %}"></script>
+
+{% endblock %}

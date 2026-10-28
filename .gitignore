@@ -1,0 +1,53 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python bytecode and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+venv.*/
+ENV/
+env/
+
+# Local databases and database exports
+db.sqlite3
+*.sqlite3
+*.db
+*.sql
+*.sql.*
+*.dump
+*.bak
+*.backup
+backup.*
+data.json
+
+# Logs
+*.log
+logs/
+
+# User uploads and collected static output
+/media/
+/assets/
+/staticfiles/
+
+# Node dependencies and package-manager logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+

@@ -1,0 +1,610 @@
+{% extends "web/home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<style>
+	/* Style the overlay with black color */
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6); /* Full black overlay */
+		z-index: 999;
+		display: none; /* Initially hidden */
+		animation: fadeIn 0.3s ease-out;
+	}
+
+	/* Popup style */
+	.popup {
+		display: block;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #fff;
+		padding: 25px 40px;
+		border-radius: 12px;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+		text-align: center;
+		max-width: 500px;
+		width: 100%;
+		z-index: 1000;
+		opacity: 0;
+		animation: popupAnimation 0.5s forwards;
+	}
+
+	/* Style the logo image */
+	.popup img {
+		width: 100px;
+		margin-bottom: 20px;
+	}
+
+	/* Button style */
+	.popup button {
+		padding: 12px 25px;
+		background-color: #244176;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	.popup button:hover {
+		background-color: #1e407d;
+	}
+
+	/* Animation for the popup */
+	@keyframes popupAnimation {
+		0% { opacity: 0; transform: translate(-50%, -60%); }
+		100% { opacity: 1; transform: translate(-50%, -50%); }
+	}
+
+	/* Animation for the overlay */
+	@keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+</style>
+
+<div style="margin-top: 80px;">
+
+
+
+			<section id="hero-1" style="background-color: #2e30bd; padding-top: 0px; padding-bottom: 0px;" class="bg--scroll hero-section">
+					
+
+
+
+						<div class="col-md-12">
+							<div class="hero-1-img wow "  >
+								<img style="width: 100%;" class="img-fluid" src="{% static 'web/file/images/janasahayakendramwebpageview.jpg' %}" alt="hero-image" >					
+							</div>
+						</div>
+
+			</section>
+		</div>
+
+			<!-- DIVIDER LINE -->
+			<hr class="divider">
+			<section id="lnk-1" class="pt-100 ct-02 content-section division">
+				<div class="container">
+					<div class="row d-flex align-items-center" style="flex-direction: row-reverse;">
+						<div class="col-md-6">
+							<div class="img-block left-column wow fadeInRight">
+								<img class="img-fluid" src="{% static 'web/file/images/homesectiontwo.jpg' %}" alt="content-image">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="txt-block right-column wow fadeInLeft">
+						 		<span class="section-id">Janasahayakendram Charitable Society</span>
+								<h6 class="s-30 w-700">Enhancing Governance and Service Delivery Across Kerala with Janasahayakendram</h6>
+								<p style="word-spacing: 3px;">Janasahayakendram is IT-approved and serves as a critical component of the Digital India Plan. We prioritize the proper delivery of various e-governance and commercial services to citizens in rural and urban areas across Kerala. It aims to improve governance by providing essential government and public utility services, social utility services, social welfare schemes, financial services, education and skill development courses, health and agriculture services, and digital literacy, among other business-to-customer services, with comprehensive coverage across the state. 
+								   
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- DIVIDER LINE -->
+			<hr class="divider">
+
+			<!-- FEATURES-12
+			============================================= -->
+			<section id="features-12" class="shape--bg shape--white-500 pt-100 features-section division">
+				<div class="container">
+					<div style="flex-direction: row-reverse;"  class="row d-flex align-items-center">
+
+						<div class="col-md-5">
+							<div class="txt-block left-column wow fadeInRight">
+								<h2 class="s-46 w-700">Seamless Digital Services</h2>
+								<p>Stay in control 
+									of your finances with intuitive wallet features, allowing you to add funds, 
+									view transaction history, and track summaries effortlessly.Your peace of mind 
+									is our priority; we employ state-of-the-art security protocols to safeguard your
+									personal information and transactions, ensuring a secure experience every time 
+									you interact with our platform.
+								</p>
+
+								<div class="cbox-1 ico-15">
+		 							<div  style="color: #2e30c0;" class="ico-wrap ">
+		 								<div class="cbox-1-ico"><span class="flaticon-check"></span></div>
+		 							</div>
+									<div class="cbox-1-txt">
+										<p>Effortless Accessibility</p>
+									</div>
+								</div>
+
+								<div class="cbox-1 ico-15">
+		 							<div  style="color: #2e30c0;" class="ico-wrap ">
+		 								<div class="cbox-1-ico"><span class="flaticon-check"></span></div>
+		 							</div>
+									<div class="cbox-1-txt">
+										<p>Transparent Wallet Management
+										</p>
+									</div>
+								</div>
+
+								<div class="cbox-1 ico-15">
+		 							<div  style="color: #2e30c0;" class="ico-wrap ">
+		 								<div class="cbox-1-ico"><span class="flaticon-check"></span></div>
+		 							</div>
+									<div class="cbox-1-txt">
+										<p class="mb-0">Robust Security Measures</p>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+
+						<!-- FEATURES-12 WRAPPER -->
+						<div class="col-md-7">
+							<div class="fbox-12-wrapper wow fadeInLeft">	
+								<div class="row">
+
+				 					<div class="col-md-6">
+
+				 						<div id="fb-12-1" class="fbox-12 bg--white-100 block-shadow r-12 mb-30">
+
+											<!-- Icon -->
+											<div class="fbox-ico ico-50">
+												<div style="color: #2e30c0;" class="shape-ico ">
+
+													<!-- Vector Icon -->
+													<span class="flaticon-layers-1"></span>
+
+													<!-- Shape -->
+													<svg style="display: none;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+													 <!-- <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" /> -->
+													</svg>
+
+												</div>
+											</div>	<!-- End Icon -->
+
+											<!-- Text -->
+											<div class="fbox-txt">
+												<h5 class="s-19 w-700">Streamlined Access</h5>
+												<p>Experience hassle-free access to government services through our user-friendly website.</p>
+											</div>
+
+				 						</div>
+
+				 						<!-- FEATURE BOX #2 -->
+				 						<div id="fb-12-2" class="fbox-12 bg--white-100 block-shadow r-12">
+
+											<div class="fbox-ico ico-50">
+												<div style="color: #2e30c0;"  class="shape-ico ">
+													<span class="flaticon-tutorial"></span>
+													<!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+													  <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+													</svg> -->
+												</div>
+											</div>
+
+											<div class="fbox-txt">
+												<h5 class="s-19 w-700">Wallet Management</h5>
+												<p>Easily add funds to your wallet for seamless transactions and track your wallet history and summaries in real-time.</p>
+											</div>
+
+				 						</div>
+				 					</div>
+
+
+				 					<div class="col-md-6">
+
+				 						<div id="fb-12-3" class="fbox-12 bg--white-100 block-shadow r-12 mb-30">
+											<div class="fbox-ico ico-50">
+												
+												<div style="color: #2e30c0;" class="shape-ico ">
+													<span class="flaticon-pay-per-click"></span>
+													<!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+													  <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+													</svg> -->
+												</div>
+
+											</div>
+
+											<div class="fbox-txt">
+												<h5 class="s-19 w-700">Security at its Core</h5>
+												<p> Rest assured with our secure platform, ensuring the safety of your transactions and personal information.</p>
+											</div>
+
+				 						</div>
+
+				 						<!-- FEATURE BOX #4 -->
+				 						<div id="fb-12-4" class="fbox-12 bg--white-100 block-shadow r-12">
+
+											<!-- Icon -->
+											<div class="fbox-ico ico-50">
+												<div style="color: #2e30c0;"  class="shape-ico ">
+
+													<!-- Vector Icon -->
+													<span class="flaticon-taxes"></span>
+
+													<!-- Shape -->
+													<!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+													  <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+													</svg> -->
+
+												</div>
+											</div>	<!-- End Icon -->
+
+											<!-- Text -->
+											<div class="fbox-txt">
+												<h5 class="s-19 w-700">Payment Solutions</h5>
+												<p>Simplify service payments with the deduction of amounts directly from your wallet, making transactions quick and easy.</p>
+											</div>
+				 						</div>
+				 					</div>
+				 				</div>
+							</div>	<!-- End row -->
+						</div>	<!-- END FEATURES-12 WRAPPER -->
+
+					</div>    <!-- End row -->
+				</div>     <!-- End container -->
+			</section>	<!-- END FEATURES-12 -->
+
+
+			<!-- INTEGRATIONS-2
+			============================================= -->
+			<section id="integrations-2" class="pt-100 integrations-section">
+				<div style="background-color: #2e30c0;" class="container">
+
+					<!-- INTEGRATIONS-2 WRAPPER -->
+					<div class="integrations-2-wrapper bg--02 r-16 text-center">
+
+						<!-- SECTION TITLE -->	
+						<div class="row justify-content-center">	
+							<div class="col-md-10 col-lg-9">
+								<div class="section-title mb-50">	
+									<!-- Title -->	
+									<h2 class="s-50 w-700"></h2>
+								</div>	
+							</div>
+						</div>
+						
+						<!-- TOOLS ROW -->	
+						<div class="row row-cols-1 row-cols-sm-3 row-cols-md-5">
+
+		 					<!-- TOOL #2 -->
+							{% for s in home_services %}
+		 					<div class="col">
+		 						<a href="{% url 'web:login_view' %}" class="in_tool it-2 r-12 wow fadeInUp">
+									<!-- Logo -->
+									<div style="margin-bottom: 5px;" class="in_tool_logo ico-65 bg--white-100 block-shadow r-12">
+										<img class="img-fluid" src="{{s.image.url}}" alt="brand-logo">
+									</div>
+									<!-- Title -->
+									<h6 style="margin-bottom: 30px;" class="s-17 w-700">{{s.name}}</h6>
+		 						</a>
+		 					</div>	<!-- END TOOL #2 -->	
+							{% endfor %}
+
+						</div>	<!-- END TOOLS ROW -->	  
+
+
+						<!-- MORE BUTTON -->
+						<div class="row">
+							<div class="col">
+								<div class="more-btn text-center mt-60 wow fadeInUp">	
+									<a href="{% url 'web:login_view' %}" class="btn btn--tra-black hover--theme">Login Now</a>
+								</div>	
+							</div>
+						</div>
+
+					</div>	<!-- END INTEGRATIONS-2 WRAPPER -->
+				</div>     <!-- End container -->
+			</section>	<!-- END INTEGRATIONS-2 -->
+			
+			<!-- FEATURES-6
+			============================================= -->
+			<section id="features-6" class="py-100 features-section division">
+				<div class="container">
+
+					<!-- SECTION TITLE -->	
+					<div class="row justify-content-center">	
+						<div class="col-md-10 col-lg-9">
+							<div class="section-title mb-70">	
+								<!-- Title -->	
+								<h2 class="s-50 w-700">Our Features</h2>	
+							</div>	
+						</div>
+					</div>
+
+					<!-- FEATURES-6 WRAPPER -->
+					<div class="fbox-wrapper text-center">
+						<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+							<!-- FEATURE BOX #1 -->
+		 					<div class="col">
+		 						<div class="fbox-6 fb-1 wow fadeInUp">
+		 							<!-- Icon -->
+									<div class="fbox-ico ico-55">
+										<div class="shape-ico color--theme">
+											<!-- Vector Icon -->
+											<span><i class='bx bx-link-alt' style="font-size:60px;"></i></span>
+											<!-- Shape -->
+											<!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											  <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+											</svg> -->
+										</div>
+									</div>	<!-- End Icon -->
+									<!-- Text -->
+									<div class="fbox-txt">
+										<h6 class="s-20 w-700">Service Link Updates</h6>
+										<p>Receive timely notifications about changes and updates to 
+											service links, ensuring uninterrupted access to government 
+											services.</p>
+									</div>
+		 						</div>
+		 					</div>	<!-- END FEATURE BOX #1 -->	
+
+		 					<!-- FEATURE BOX #2 -->
+		 					<div class="col">
+		 						<div class="fbox-6 fb-2 wow fadeInUp">
+		 							<!-- Icon -->
+									<div class="fbox-ico ico-55">
+										<div class="shape-ico color--theme">
+											<!-- Vector Icon -->
+											<span><i class='bx bx-detail' style="font-size:60px;"></i></span>
+											<!-- Shape -->
+											<!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											  <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+											</svg> -->
+										</div>
+									</div>	<!-- end Icon -->
+									<!-- Text -->
+									<div class="fbox-txt">
+										<h6 class="s-20 w-700">Service Details</h6>
+										<p> Access comprehensive information about Govt services, 
+											empowering informed decisions and efficient utilization.</p>
+									</div>
+		 						</div>
+		 					</div>	<!-- END FEATURE BOX #2 -->	
+
+		 					<!-- FEATURE BOX #3 -->
+		 					<div class="col">
+		 						<div class="fbox-6 fb-3 wow fadeInUp">
+		 							<!-- Icon -->
+									<div class="fbox-ico ico-55">
+										<div class="shape-ico color--theme">
+											<!-- Vector Icon -->
+											<span><i class='bx bx-up-arrow-circle' style="font-size:60px;"></i></span>
+											<!-- Shape -->
+											<!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											  <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+											</svg> -->
+										</div>
+									</div>	<!-- End Icon -->
+									<!-- Text -->
+									<div class="fbox-txt">
+										<h6 class="s-20 w-700">New Service Updates</h6>
+										<p>Stay ahead with alerts on newly added government services, 
+											expanding your options for essential assistance and support.</p>
+									</div>
+		 						</div>
+		 					</div>	<!-- END FEATURE BOX #3 -->	
+
+		 					<!-- FEATURE BOX #4 -->
+		 					<div class="col">
+		 						<div class="fbox-6 fb-4 wow fadeInUp">
+		 							<!-- Icon -->
+									<div class="fbox-ico ico-55">
+										<div class="shape-ico color--theme">
+											<!-- Vector Icon -->
+											<span><i class='bx bxs-videos' style="font-size:60px;"></i></span>
+											<!-- Shape -->
+											<!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											  <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+											</svg> -->
+										</div>
+									</div>	<!-- End Icon -->
+									<!-- Text -->
+									<div class="fbox-txt">
+										<h6 class="s-20 w-700">Video Tutorials</h6>
+										<p>Enhance your understanding with a library of video 
+											tutorials providing step-by-step guidance on utilizing
+											 various government services.</p>
+									</div>
+		 						</div>
+		 					</div>	<!-- END FEATURE BOX #4 -->	
+
+							 <div class="col downZ">
+								<div class="fbox-6 fb-4 wow fadeInUp">
+									<!-- Icon -->
+								   <div class="fbox-ico ico-55">
+									   <div class="shape-ico color--theme">
+										   <!-- Vector Icon -->
+										   <span><i class='bx bxs-category-alt' style="font-size:60px;"></i></span>
+										   <!-- Shape -->
+										   <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											 <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+										   </svg> -->
+									   </div>
+								   </div>	<!-- End Icon -->
+								   <!-- Text -->
+								   <div class="fbox-txt">
+									   <h6 class="s-20 w-700">Useful Tools</h6>
+									   <p> Utilize a range of tools designed to simplify and 
+										streamline processes related to government services.</p>
+								   </div>
+								</div>
+							</div>	<!-- END FEATURE BOX #5 -->	
+							
+							<div class="col downZ">
+								<div class="fbox-6 fb-4 wow fadeInUp">
+									<!-- Icon -->
+								   <div class="fbox-ico ico-55">
+									   <div class="shape-ico color--theme">
+										   <!-- Vector Icon -->
+										   <span class=""><i class='bx bx-support' style="font-size:60px;"></i></span>
+										   <!-- Shape -->
+										   <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											 <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+										   </svg> -->
+
+									   </div>
+								   </div>	<!-- End Icon -->
+								   <!-- Text -->
+								   <div class="fbox-txt">
+									   <h6 class="s-20 w-700">24/7 Support </h6>
+									   <p>Enjoy round-the-clock support services, 
+										providing prompt assistance and guidance 
+										whenever you need it.</p>
+								   </div>
+								</div>
+							</div>	<!-- END FEATURE BOX #6 -->	
+
+							<div class="col downZ">
+								<div class="fbox-6 fb-4 wow fadeInUp">
+									<!-- Icon -->
+								   <div class="fbox-ico ico-55">
+									   <div class="shape-ico color--theme">
+										   <!-- Vector Icon -->
+										   <span><i class='bx bx-certification' style="font-size:60px;"></i></span>
+										   <!-- Shape -->
+										   <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											 <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+										   </svg> -->
+
+									   </div>
+								   </div>	<!-- End Icon -->
+								   <!-- Text -->
+								   <div class="fbox-txt">
+									   <h6 class="s-20 w-700">Certificate </h6>
+									   <p>Get expert assistance with obtaining essential 
+										certificates, ensuring hassle-free processing and compliance</p>
+								   </div>
+								</div>
+							</div>	<!-- END FEATURE BOX #7 -->	
+
+							<div class="col downZ">
+								<div class="fbox-6 fb-4 wow fadeInUp">
+									<!-- Icon -->
+								   <div class="fbox-ico ico-55">
+									   <div class="shape-ico color--theme">
+										   <!-- Vector Icon -->
+										   <span><i class='bx bxs-message-error' style="font-size:60px;"></i></span>
+										   <!-- Shape -->
+										   <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+											 <path d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z" transform="translate(100 100)" />
+										   </svg> -->
+									   </div>
+								   </div>	<!-- End Icon -->
+								   <!-- Text -->
+								   <div class="fbox-txt">
+									   <h6 class="s-20 w-700">Complaints Resolution</h6>
+									   <p>Lodge complaints and provide feedback, enabling 
+										continuous improvement and better service delivery.</p>
+								   </div>
+								</div>
+							</div>	<!-- END FEATURE BOX #8 -->	
+
+						</div>  <!-- End row -->  
+					</div>	<!-- END FEATURES-6 WRAPPER -->
+				</div>     <!-- End container -->
+			</section>	<!-- END FEATURES-6 -->
+
+			<hr class="divider">
+
+
+
+			<!-- FEATURES-2
+			============================================= -->
+			{% comment %} <section id="features-2" class="py-100 features-section division">
+				<div class="container">
+					<!-- SECTION TITLE -->	
+					<div class="row justify-content-center">	
+						<div class="col-md-10 col-lg-9">
+							<div class="section-title mb-80">	
+								<h2 class="s-50 w-700">The Complete Solutions</h2>	
+							</div>	
+						</div>
+					</div>
+					<!-- FEATURES-2 WRAPPER -->
+					<div class="fbox-wrapper text-center">
+						<div class="row row-cols-1 row-cols-md-3">
+							{% for cs in completesolutions %}
+		 					<div class="col">
+		 						<div class="fbox-2 fb-1 wow fadeInUp">
+									<div class=" gr--whitesmoke h-175">
+										<img class="img-fluid light-theme-img imgZ" src="{{ cs.image.url }}" alt="feature-image">
+									</div>
+									<div class="fbox-txt downZ">
+										<h6 class="s-22 w-700">{{ cs.title }}</h6>
+										<p>{{ cs.description }}</p>
+									</div>
+		 						</div>
+		 					</div>
+							{% endfor %}	
+						</div>  <!-- End row -->  
+					</div>	<!-- END FEATURES-2 WRAPPER -->
+				</div>     <!-- End container -->
+			</section>	<!-- END FEATURES-2 --> {% endcomment %}
+
+			<!-- DIVIDER LINE -->
+			<hr class="divider">
+
+
+
+			<!-- BRAND LOGO SECTION -->
+			<!-- <div id="brands-1" class="pt-80 pb-100 brands-section">
+				<div class="container">	
+					<div class="row">
+						<div class="col text-center">	
+							<div class="owl-carousel brands-carousel-5">
+								{% for l in logos %}
+								<div class="brand-logo">
+									<img class="img-fluid light-theme-img" src="{{ l.image.url }}" alt="brand-logo">
+								</div>
+								{% endfor %}
+							</div>	
+						</div>
+					</div>  
+				</div>	
+			</div>	 -->
+
+			<!-- DIVIDER LINE -->
+			<hr class="divider">
+
+<!-- Popup Message -->
+{% comment %} <div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+    <img src="{% static 'web/file/images/unnamed (1)notbg.png' %}" alt="Logo">
+    <p style="text-align: justify; font-size: 15px;">"Some services are not enabled. We are working on updates, and the full functionality will be available soon. Thank you for your patience!"</p>
+    <button id="closeBtn">OK</button>
+</div> {% endcomment %}
+
+
+<script src="{% static 'web/js/index.js' %}" defer></script>
+
+{% endblock %}

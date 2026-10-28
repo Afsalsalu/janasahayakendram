@@ -1,0 +1,254 @@
+{% extends "web/exam/base.html" %}
+{% load static %}
+{% block content %}  
+
+<style>
+  .blue{
+    color:blue;
+  }
+  .red{
+    color:red;
+  }
+</style>
+        <!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-title">
+              <div class="row">
+                <div class="col-6">
+                  <h4> DASHBOARD</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid">
+            <div class="row size-column"> 
+              <div class="col-xxl-9 box-col-12">
+                <div class="row"> 
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card o-hidden small-widget">
+                      <div class="card-body total-project border-b-primary border-2"><span class="f-light f-w-500 f-14">USERNAME</span>
+                        <div class="project-details"> 
+                          <div class="project-counter"> 
+                            {% if profile %}
+                            <h5 class="f-w-600">{{ profile.user.username }}</h5><span class="f-12 f-w-400">(This month)</span>
+                            {% endif %}
+                          </div>
+                          <div class="product-sub bg-primary-light">
+                            <i class='bx bx-user'></i>
+                          </div>
+                        </div>
+                        <ul class="bubbles">
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card o-hidden small-widget">
+                      <div class="card-body total-Progress border-b-warning border-2"> <span class="f-light f-w-500 f-14">GENDER  </span>
+                        <div class="project-details">
+                          <div class="project-counter">
+                            <h5 class="f-w-600">{{ profile.gender }}
+                            </h5><span class="f-12 f-w-400">(This month) </span>
+                          </div>
+                          <div class="product-sub bg-warning-light"> 
+                            <i class='bx bxs-user-detail' ></i>
+                          </div>
+                        </div>
+                        <ul class="bubbles">
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card o-hidden small-widget">
+                      <div class="card-body total-Complete border-b-secondary border-2"><span class="f-light f-w-500 f-14">CREATED ON</span>
+                        <div class="project-details">
+                          <div class="project-counter">
+                            <h5 class="f-w-600">{{ profile.registration_date }}</h5><span class="f-12 f-w-400">(This month) </span>
+                          </div>
+                          <div class="product-sub bg-secondary-light"> 
+                            <i class='bx bx-timer' ></i>
+                          </div>
+                        </div>
+                        <ul class="bubbles"> 
+                          <li class="bubble"> </li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"> </li>
+                          <li class="bubble"></li>
+                          <li class="bubble"> </li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"> </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card o-hidden small-widget">
+                      <div class="card-body total-upcoming"><span class="f-light f-w-500 f-14">LANGAUGE
+                    </span>
+                        <div class="project-details"> 
+                          <div class="project-counter">
+                            <h4 class="f-w-600">English</h4><span class="f-12 f-w-400">(This month) </span>
+                          </div>
+                          <div class="product-sub bg-light-light"> 
+                            <i class='bx bxs-user-voice' ></i>
+                          </div>
+                        </div>
+                        <ul class="bubbles"> 
+                          <li class="bubble"> </li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                          <li class="bubble"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <marquee behavior="" direction="">
+                        <p>Note:- The Candidates will get 5 attempts to appear for the final online examination.Those candidates who clear the final online exam successfully, will be eligible to do New SSC registration on <a href="https://entrepreneur.sscegov.com/">https://entrepreneur.sscegov.com/</a>  सूचना:- उम्मीदवारों को अंतिम ऑनलाइन परीक्षा में शामिल होने के लिए 5 मौके मिलेंगे। वे उम्मीदवार जो अंतिम ऑनलाइन परीक्षा सफलतापूर्वक उत्तीर्ण करते हैं, वे <a href="https://entrepreneur.sscegov.com/">https://entrepreneur.sscegov.com/</a> पर नया सीएससी पंजीकरण करने के पात्र होंगे।</p>
+                    </marquee>
+                  <!-- HTML (DOM) sourced data  Starts-->
+                  <div class="col-sm-12">
+                    <div class="card">
+                      <div class="card-header pb-0 card-no-border">
+                        <h4 class="mb-3">For General queries - Click Here</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive custom-scrollbar">
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if progress %}
+                                    {% for entry in progress %}
+                                    <tr>
+                                        <td>{{ entry.status }}</td>
+                                        <td>
+                                            {% if entry.status == 'Passed' %}
+                                                {% if profile.certificate_paid %}
+                                                <a href="{% url 'exam:certificate_view' %}" target="_blank">View Certificate</a>
+                                                <a href="{% url 'exam:certificate_view' %}?download=true">Download Certificate</a>
+                                                {% else %}
+                                                    {% if profile.details_filled %}
+                                                        <button id="pay-for-certificate" class="btn btn-primary">
+                                                            Pay for Certificate Rs.375/-
+                                                        </button>
+                                                    {% else %}
+                                                        <p>Please complete your details to proceed.</p>
+                                                        <a href="{% url 'exam:details_entry' %}" class="btn btn-primary">
+                                                            Complete Your Details
+                                                        </a>
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% elif entry.status == 'Failed Attempt 1' %}
+                                                <span class="blue">Your 1st attempt failed. You have only 1 chance remaining. Better luck on the 2nd attempt!</span>
+                                            {% elif entry.status == 'Failed Attempt 2' %}
+                                                <span class="red">You have failed the exam twice. The exam is frozen, and no more chances are available. Sorry!</span>
+                                            {% else %}
+                                                <span class="blue">Exam not attempted. Please complete the assessment to take the exam.</span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="1">Exam not attempted. Please complete the assessment and take the exam.</td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- footer start-->
+<!-- Razorpay Payment Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  document.getElementById("pay-for-certificate").onclick = function (e) {
+    var options = {
+      key: "{{ razorpay_key_id }}", // Your Razorpay Key ID
+      amount: 100, // Amount in paise (37500 paise = 375 INR)
+      name: "{{ profile.user.username }}",
+      description: "Certificate Payment",
+      image: "https://sscegov.com/home/janakagr/public_html/webssc/static/web/file/images/logoSSC-blue.png", // Add your logo URL here
+      theme: {
+        color: "#006666" // Set the theme color here
+      },
+      handler: function (response) {
+        fetch("{% url 'exam:certificate_payment' %}", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: JSON.stringify({
+            razorpay_payment_id: response.razorpay_payment_id,
+            provider_order_id: response.razorpay_order_id,
+            signature_id: response.razorpay_signature,
+          }),
+        })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            alert("Payment successful! Redirecting to download your certificate...");
+            window.location.href = "{% url 'exam:dashboard' %}";
+          } else {
+            alert("Payment failed. Please try again.");
+          }
+        });
+      },
+      prefill: {
+        name: "{{ profile.user.get_full_name }}", 
+        email: "{{ profile.user.email }}"
+      }
+    };
+    var rzp = new Razorpay(options);
+    rzp.open();
+    e.preventDefault();
+  };
+</script>
+
+
+{% endblock %}

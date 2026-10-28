@@ -1,0 +1,72 @@
+{% extends "web/admin_panel/base.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'web/css/form.css' %}">
+
+<div class="group-data-[sidebar-size=lg]:ltr:md:ml-vertical-menu group-data-[sidebar-size=lg]:rtl:md:mr-vertical-menu group-data-[sidebar-size=md]:ltr:ml-vertical-menu-md group-data-[sidebar-size=md]:rtl:mr-vertical-menu-md group-data-[sidebar-size=sm]:ltr:ml-vertical-menu-sm group-data-[sidebar-size=sm]:rtl:mr-vertical-menu-sm pt-[calc(theme('spacing.header')_*_1)] pb-[calc(theme('spacing.header')_*_0.8)] px-4 group-data-[navbar=bordered]:pt-[calc(theme('spacing.header')_*_1.3)] group-data-[navbar=hidden]:pt-0 group-data-[layout=horizontal]:mx-auto group-data-[layout=horizontal]:max-w-screen-2xl group-data-[layout=horizontal]:px-0 group-data-[layout=horizontal]:group-data-[sidebar-size=lg]:ltr:md:ml-auto group-data-[layout=horizontal]:group-data-[sidebar-size=lg]:rtl:md:mr-auto group-data-[layout=horizontal]:md:pt-[calc(theme('spacing.header')_*_1.6)] group-data-[layout=horizontal]:px-3 group-data-[layout=horizontal]:group-data-[navbar=hidden]:pt-[calc(theme('spacing.header')_*_0.9)]">        
+    <div class="container-fluid group-data-[content=boxed]:max-w-boxed mx-auto">
+
+        <h4 class="py-5"></h4>
+        <div class="card" style="background-color: whitesmoke;">
+            <div class="card-body">
+              <h6 class="mb-4 text-15">Add {{ view.title }} Services</h6>
+              <div class="grid grid-cols-1 gap-5">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group{% if form.service_name.errors %} has-error{% endif %}">
+                            {{ form.service_name.label_tag }}
+                            {{ form.service_name }}
+                            {% if form.service_name.errors %}
+                                <span class="error">{{ form.service_name.errors|striptags }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group{% if form.service_link.errors %} has-error{% endif %}">
+                            {{ form.service_link.label_tag }}
+                            {{ form.service_link }}
+                            {% if form.service_link.errors %}
+                                <span class="error">{{ form.service_link.errors|striptags }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group{% if form.service_logo.errors %} has-error{% endif %}">
+                            {{ form.service_logo.label_tag }}
+                            {{ form.service_logo }}
+                            {% if form.service_logo.errors %}
+                                <span class="error">{{ form.service_logo.errors|striptags }}</span>
+                            {% endif %}
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group{% if form.is_active.errors %} has-error{% endif %}">
+                            {{ form.is_active.label_tag }}
+                            {{ form.is_active }}
+                            {% if form.is_active.errors %}
+                                <span class="error">{{ form.is_active.errors|striptags }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group{% if form.is_popular.errors %} has-error{% endif %}">
+                            {{ form.is_popular.label_tag }}
+                            {{ form.is_popular }}
+                            {% if form.is_popular.errors %}
+                                <span class="error">{{ form.is_popular.errors|striptags }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+
+                      </div>
+                    <button type="submit" class="buttonF" style=" background-color: #024776; color: white;">Save</button>
+                </form>
+              </div><!-- END GRID -->
+            </div>
+          </div><!-- end card -->
+
+    </div>
+</div>
+
+{% endblock %}

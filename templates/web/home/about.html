@@ -1,0 +1,217 @@
+{% extends "web/home/base.html" %}
+{% load static %}
+{% block content %}
+
+    <section id="about-2" class="rel inner-page-hero about-section division backB">
+    	<!-- ABOUT-2 TITLE -->
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-11 col-lg-10 col-xl-9">
+    				<div class="about-2-title mb-60">
+    					<!-- Title -->
+    					<h2 class="s-52 w-700 mb-30 txtW">{{ about_content.main_title }}</h2>
+    					<!-- Text -->
+    					<p class="mb-0 txtW">{{ about_content.main_text }}</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div> <!-- END ABOUT-2 TITLE -->
+    
+    	<!-- ABOUT-2 IMAGES -->
+    	<div class="container-fluid">
+    		<div class="row">
+    			<!-- IMAGES-1 -->
+    			<div class="col-md-5">
+    				<div class="text-end">
+    					<!-- IMAGE-1 -->
+    					<div class="about-2-img a-2-1 r-12">
+    						<img class="img-fluid" src="{{ about_content.main_image1.url }}" alt="about-image">
+    					</div>
+    					<!-- IMAGE-2 -->
+    					<div class="about-2-img a-2-2 r-12">
+    						<img class="img-fluid" src="{{ about_content.main_image2.url }}" alt="about-image">
+    					</div>
+    				</div>
+    			</div> <!-- END IMAGES-1 -->
+    
+    			<!-- IMAGES-2 -->
+    			<div class="col-md-7">
+    				<!-- IMAGE-3 -->
+    				<div class="about-2-img a-2-3 r-12">
+    					<img class="img-fluid" src="{{ about_content.main_image3.url }}" alt="about-image">
+    				</div>
+    				<div class="row">
+    					<!-- TEXT -->
+    					<div class="col-md-7 col-lg-6">
+    						<div class="a2-txt bg--black-400 pattern-01 bg--fixed color--white r-12">
+    							<!-- Icon -->
+    							<div class="a2-txt-quote ico-40 o-20">
+    								<span class="flaticon-quote"></span>
+    							</div>
+    							<!-- Text -->
+    							<p>The platform's transformative impact on citizen engagement
+    								and service delivery, marking it as a pivotal milestone
+    								in government innovation.
+    							</p>
+    							<!-- Author -->
+    							<p class="a2-txt-author">Charlie Cheever</p>
+    						</div>
+    					</div>
+    					<!-- IMAGE-4 -->
+    					<div class="col-md-5 col-lg-6">
+    						<div class="about-2-img a-2-4 r-12">
+    							<img class="img-fluid" src="{{ about_content.main_image4.url }}" alt="about-image">
+    						</div>
+    					</div>
+    				</div> <!-- End row -->
+    			</div> <!-- END IMAGES-2 -->
+    		</div> <!-- End row -->
+    	</div> <!-- END ABOUT-2 IMAGES -->
+    </section> <!-- END ABOUT-2 -->
+
+    <hr class="divider">
+
+	<div id="about-3" class="pt-100 about-section division">
+		<div class="container">
+			<div class="row">
+				<!-- ABOUT-3 TEXT -->
+				<div class="col-md-6">
+					<div id="a3-1" class="txt-block">
+						<!-- Title -->
+						<h5 class="s-24 w-700 mb-20">{{ about_content.mission_title }}</h5>
+						<!-- Text -->
+						<p>{{ about_content.mission_text|linebreaks }}</p>
+					</div>
+				</div> <!-- END ABOUT-3 TEXT -->
+				<!-- ABOUT-3 TEXT -->
+				<div class="col-md-6">
+					<div id="a3-2" class="txt-block">
+						<!-- Title -->
+						<h5 class="s-24 w-700 mb-20">{{ about_content.vision_title }}</h5>
+						<!-- Text -->
+						<p>{{ about_content.vision_text|linebreaks }}</p>
+					</div>
+				</div> <!-- END ABOUT-3 TEXT -->
+			</div> <!-- End row -->
+		</div> <!-- End container -->
+	</div> <!-- END ABOUT-3 -->
+
+    <div class="py-50 statistic-section"></div>
+    <hr class="divider">
+
+    <section class="pt-100 ws-wrapper content-section">
+    	<div class="container">
+    		<div class="bc-1-wrapper bg--02 bg--fixed r-16">
+    			<div class="section-overlay">
+    				<div class="row d-flex align-items-center">
+    					<!-- TEXT BLOCK -->
+    					<div class="col-md-6 order-last order-md-2">
+    						<div class="txt-block left-column wow fadeInRight">
+    							<!-- Title -->
+    							<h5 class="s-24 w-700 h5-title">{{ about_content.topic_title1 }}</h5>
+    							<!-- Text -->
+    							<p>{{ about_content.topic_text1|linebreaks }}</p>
+    						</div>
+    					</div> <!-- END TEXT BLOCK -->
+    					<!-- IMAGE BLOCK -->
+    					<div class="col-md-6 order-first order-md-2">
+    						<div class="img-block right-column wow fadeInLeft">
+    							<img class="img-fluid" src="{{ about_content.topic_image1.url }}" alt="content-image">
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="pt-100 ct-02 content-section division">
+    	<div class="container">
+    		<!-- SECTION CONTENT (ROW) -->
+    		<div class="row d-flex align-items-center">
+    			<!-- IMAGE BLOCK -->
+    			<div class="col-md-6">
+    				<div class="img-block left-column wow fadeInRight">
+    					<img class="img-fluid" src="{{ about_content.topic_image2.url }}" alt="content-image">
+    				</div>
+    			</div>
+    			<!-- TEXT BLOCK -->
+    			<div class="col-md-6">
+    				<div class="txt-block right-column wow fadeInLeft">
+    					<h5 class="s-24 w-700 mb-20">{{ about_content.topic_title2 }}</h5>
+    					<p>{{ about_content.topic_text2|linebreaks }}</p>
+    				</div>
+    			</div> <!-- END TEXT BLOCK -->
+    		</div> <!-- END SECTION CONTENT (ROW) -->
+    	</div> <!-- End container -->
+    </section> <!-- END TEXT CONTENT -->
+
+    <hr class="divider">
+
+    <section id="blog-1" class="py-100 blog-section division">
+    	<div class="container">
+    		<!-- SECTION TITLE -->
+    		<div class="row justify-content-center">
+    			<div class="col-md-10 col-lg-9">
+    				<div class="section-title mb-70">
+    					<h2 class="s-50 w-700">{{ about_content.blog_title }}</h2>
+    					<p class="s-21 color--grey">{{ about_content.blog_text }}</p>
+    				</div>
+    			</div>
+    		</div>
+    
+    		<div class="row">
+    			<!-- BLOG POST -->
+				 {% for blog in blogs %}
+    			<div class="col-md-6 col-lg-4">
+    				<div id="bp-1-1" class="blog-post wow fadeInUp">
+    					<!-- BLOG POST IMAGE -->
+    					<div class="blog-post-img mb-35">
+    						<img class="img-fluid r-16" src="{{ blog.image.url }}" alt="blog-post-image">
+    					</div>
+    					<!-- BLOG POST TEXT -->
+    					<div class="blog-post-txt">
+    						<!-- Post Tag -->
+    						<span class="post-tag color--pink-400">{{ blog.mini_title }}</span>
+    						<!-- Post Link -->
+    						<h6 class="s-20 w-700">
+    							<a href="#!">{{ blog.title }}</a>
+    						</h6>
+    						<!-- Text -->
+    						<p>{{ blog.text }}</p>
+    					</div> <!-- END BLOG POST TEXT -->
+    				</div>
+    			</div> 
+				{% endfor %}
+				<!-- END BLOG POST -->
+
+    		</div> <!-- End row -->
+    	</div> <!-- End container -->
+    </section> <!-- END BLOG-1 -->
+
+    <hr class="divider">
+
+    <div id="brands-1" class="pt-80 pb-100 brands-section">
+    	<div class="container">
+    		<!-- BRANDS CAROUSEL -->
+    		<div class="row">
+    			<div class="col text-center">
+    				<div class="owl-carousel brands-carousel-5">
+    					<!-- BRAND LOGO IMAGE -->
+						 {% for logo in about_logos %}
+    					<div class="brand-logo">
+    						<a href="#">
+								<img class="img-fluid light-theme-img" src="{{ logo.image.url }}" alt="brand-logo">
+							</a>
+    					</div>
+						{% endfor %}
+    				</div>
+    			</div>
+    		</div> <!-- END BRANDS CAROUSEL -->
+    	</div> <!-- End container -->
+    </div> <!-- END BRANDS-1 -->
+
+    <!-- DIVIDER LINE -->
+    <hr class="divider">
+
+{% endblock %}

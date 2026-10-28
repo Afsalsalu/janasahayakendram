@@ -1,0 +1,218 @@
+{% extends "web/franchise/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'web/css/non.css' %}" />
+
+
+<div class="relative min-h-screen group-data-[sidebar-size=sm]:min-h-sm">
+  
+  <div class="group-data-[sidebar-size=lg]:ltr:md:ml-vertical-menu group-data-[sidebar-size=lg]:rtl:md:mr-vertical-menu group-data-[sidebar-size=md]:ltr:ml-vertical-menu-md group-data-[sidebar-size=md]:rtl:mr-vertical-menu-md group-data-[sidebar-size=sm]:ltr:ml-vertical-menu-sm group-data-[sidebar-size=sm]:rtl:mr-vertical-menu-sm pt-[calc(theme('spacing.header')_*_1)] pb-[calc(theme('spacing.header')_*_0.8)] px-4 group-data-[navbar=bordered]:pt-[calc(theme('spacing.header')_*_1.3)] group-data-[navbar=hidden]:pt-0 group-data-[layout=horizontal]:mx-auto group-data-[layout=horizontal]:max-w-screen-2xl group-data-[layout=horizontal]:px-0 group-data-[layout=horizontal]:group-data-[sidebar-size=lg]:ltr:md:ml-auto group-data-[layout=horizontal]:group-data-[sidebar-size=lg]:rtl:md:mr-auto group-data-[layout=horizontal]:md:pt-[calc(theme('spacing.header')_*_1.6)] group-data-[layout=horizontal]:px-3 group-data-[layout=horizontal]:group-data-[navbar=hidden]:pt-[calc(theme('spacing.header')_*_0.9)]">        
+    <div class="container-fluid group-data-[content=boxed]:max-w-boxed mx-auto">
+
+      <div class="card">
+        <div class="card-body">
+        <h6 class="mb-4 text-15">Centre Dashboard</h6>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+                <div style="background-color: rgb(0 129 106);" class="px-3 py-6 text-center  border border-green-100 rounded-md dark:bg-green-900 dark:border-zink-800">
+                    <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 bg-green-50 text-15 dark:bg-green-400/20"><i data-lucide="monitor" class="text-green-500 fill-green-200 dark:fill-green-500/20"></i></div>
+                    <h4 style="color: whitesmoke;" class="mb-1 text-white-500 fs-4xl">
+                        <span  class="counter-value" data-target="200">200</span>+
+                    </h4> <p style="color: whitesmoke;" class="mb-0 text-white-400">Total Services</p> </div>
+                <div style="background-color: rgb(131 131 132); border-color: rgb(131 131 132);" class="px-3 py-6 text-center bg-green-100 border border-green-100 rounded-md dark:bg-green-900 dark:border-zink-800">
+                    <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 bg-green-50 text-15 dark:bg-green-400/20"><i data-lucide="wallet" class="text-green-500 fill-green-200 dark:fill-green-500/20"></i></div>
+                    <h4 style="color: whitesmoke;" class="mb-1 text-white-500 fs-4xl">₹<span class="counter-value" data-target="0">0</span></h4>
+                    <p style="color: whitesmoke;" class="mb-0 text-white-400">Wallet Amount </p>
+                </div>
+                <div style="background-color: rgb(0 129 106);" class="px-3 py-6 text-center bg-green-100 border border-green-100 rounded-md dark:bg-green-900 dark:border-zink-800">
+                    <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 bg-green-50 text-15 dark:bg-green-400/20"><i data-lucide="settings" class="text-green-500 fill-green-200 dark:fill-green-500/20"></i></div>
+                    <h4 style="color: whitesmoke;" class="mb-1 text-white-500 fs-4xl">{{ ip }}</h4>
+                    <p style="color: whitesmoke;" class="mb-0 text-white-400">IP Aadress </p>
+                </div>
+
+                <div  class="px-3 py-6 text-center border rounded-md bg-sky-500 border-sky-500 dark:bg-sky-900 dark:border-zink-800">
+                    <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 bg-white/90 text-15 dark:bg-sky-400/20"><i data-lucide="clock-4" class="text-sky-500 fill-sky-200 dark:fill-sky-500/20"></i></div>
+                    <h5 class="mb-1 text-white-50 fs-4xl" style="color: whitesmoke;">{{ last_login|date:"d M Y, H:i:s" }}</h5>
+                    <p class="mb-0 text-white-200" style="color: whitesmoke;">Login Time</p>
+                </div>
+            </div>
+        </div>
+    </div><!--end card-->
+
+            <div class="container marquee marquees">
+              <div class="marquee-title"><span class="title-tip"></span>Alerts & Updates</div>
+              
+              
+              <marquee behavior="" direction="" >
+                Be cautious of fraud attempts and never share your OTP or password with anyone. Protect your sensitive information by regularly updating your software to the latest version. This helps ensure you have the latest security features and protections in place. Stay vigilant and secure!
+              </marquee>
+            </div>
+            <h4 class="py-3"></h4>
+            <h4 class="py-5"></h4>
+
+            <h4 class="py-3 mt-5">Popular Services</h4>
+            <h4 class="py-5"></h4>
+
+            <div class="grid grid-cols-12 2xl:grid-cols-12 gap-x-5">
+                {% if popular_services %}
+                {% for service in popular_services %}
+                <div class="col-span-12 card md:col-span-6 lg:col-span-3 2xl:col-span-2">
+                    <a href="{{ service.service_link }}" target="_blank">
+                        <div class="card cardo service-category">
+                            <div class="card-body text-center">
+                                <div class="flex items-center justify-center mx-auto rounded-full size-14 bg-custom-100 text-custom-500 dark:bg-custom-500/20">
+                                    <img class="mb-3" style="width:76px;" src="{{ service.service_logo.url }}" alt="{{ service.service_name }}">
+                                </div>
+                                <h5 class="pt-2 hard">{{ service.service_name }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p style="text-align: center;">popular services not available</p>
+                {% endif %}
+            </div>
+          <!-- / Content -->
+          <h4 class="py-2 mt-3">Latest News</h4>
+          <div class="grid grid-cols-1 gap-x-5 md:grid-cols-2 xl:grid-cols-4">
+            {% if latest_news %}
+            {% for latestnews in latest_news %}
+              <a class="block overflow-hidden transition card group/card hover:shadow-lg" href="#!">
+                  <div class="relative">
+                      <img class="transition-transform duration-500 ease-in-out group-hover/card:scale-105 rounded-t-md" src="{{ latestnews.image.url }}" alt="Image">
+                  </div>
+                  <div class="card-body" style="background: powderblue;">
+                      <h6 class="mb-4 text-15">
+                          {{ latestnews.title }}
+                      </h6>
+                      <p class="mt-2 text-slate-500 dark:text-zink-200">
+                          {{ latestnews.content }}
+                      </p>
+                  </div>
+              </a>
+              {% endfor %}
+              {% else %}
+              <p style="text-align: center;">latest news not available</p>
+              {% endif %}
+          </div><!--end grid-->
+ 
+          <div class="grid grid-cols-1 gap-x-5 xl:grid-cols-2 py-5">
+            
+            <div class="card" style="background: white;">
+                <div class="card-body">
+                    <div class="flex items-center mb-3">
+                        <h6 class="grow text-15">Recent Wallet <span style="color: brown;">Payment Transactions</span></h6>
+                        <div class="relative dropdown shrink-0">
+                            <button type="button" class="flex items-center justify-center size-[30px] p-0 bg-white text-slate-500 btn hover:text-slate-500 hover:bg-slate-100 focus:text-slate-500 focus:bg-slate-100 active:text-slate-500 active:bg-slate-100 dark:bg-zink-700 dark:hover:bg-slate-500/10 dark:focus:bg-slate-500/10 dark:active:bg-slate-500/10 dropdown-toggle" id="customServiceDropdown" data-bs-toggle="dropdown">
+                                <i data-lucide="more-vertical" class="inline-block size-4"></i>
+                            </button>
+                        
+                            <ul class="absolute z-50 hidden py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="customServiceDropdown">
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">1 Weekly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">1 Monthly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">3 Monthly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">6 Monthly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">This Yearly</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="ltr:text-left rtl:text-right">
+                               
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500" style="text-align: center;">no transactions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div><!--end card-->
+            <div class="card" style="background: white;">
+                <div class="card-body">
+                    <div class="flex items-center mb-3">
+                        <h6 class="grow text-15">Recent Service <span style="color: green;">History</span></h6>
+                        <div class="relative dropdown shrink-0">
+                            <button type="button" class="flex items-center justify-center size-[30px] p-0 bg-white text-slate-500 btn hover:text-slate-500 hover:bg-slate-100 focus:text-slate-500 focus:bg-slate-100 active:text-slate-500 active:bg-slate-100 dark:bg-zink-700 dark:hover:bg-slate-500/10 dark:focus:bg-slate-500/10 dark:active:bg-slate-500/10 dropdown-toggle" id="customServiceDropdown" data-bs-toggle="dropdown">
+                                <i data-lucide="more-vertical" class="inline-block size-4"></i>
+                            </button>
+                        
+                            <ul class="absolute z-50 hidden py-2 mt-1 ltr:text-left rtl:text-right list-none bg-white rounded-md shadow-md dropdown-menu min-w-[10rem] dark:bg-zink-600" aria-labelledby="customServiceDropdown">
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">1 Weekly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">1 Monthly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">3 Monthly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">6 Monthly</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200" href="#!">This Yearly</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="ltr:text-left rtl:text-right">
+                       
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-3.5 py-2.5 border-y border-slate-200 dark:border-zink-500" style="text-align: center;">no history</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div><!--end card-->
+      </div>
+
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    
+    
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+    
+    
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+    
+  </div>
+  <!-- / Layout wrapper -->
+
+{% endblock content %}    
+
+<!-- Newly Arrived / recently added services -->
+<!-- Featured / Popular Services -->
+<!-- Recent Transactions -->
+<!-- New Services -->
+<!-- Shortcut -->

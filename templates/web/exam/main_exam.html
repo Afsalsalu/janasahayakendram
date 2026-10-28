@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Main Exam SSC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'web/css/exam.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .exam-area {
+            padding: 40px 0;
+        }
+        .section-title {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .question-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 30%;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            float: left;
+        }
+        .question-nav-item {
+            background: #007a9b;
+            color: #fff;
+            text-decoration: none;
+            padding: 21px 10px 5px;
+            text-align: center;
+            flex: 1 0 16%;
+            max-width: 35px;
+            font-size: 0.9rem;
+            height: 25px;
+            font-family: monospace;
+        }
+        @media (max-width: 600px) {
+            .question-nav-item {
+                flex: 1 0 30%;
+            }
+        }
+        .question-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none; /* Hide all questions by default */
+        }
+        .question-card.active {
+            display: block; /* Show the active question */
+            width: 75%;
+        }
+        .question-card legend {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .question-card input[type="radio"] {
+            margin-right: 10px;
+        }
+        .question-card label {
+            margin-bottom: 10px;
+            display: block;
+        }
+        .question-nav-item.active {
+            background-color: aqua;
+            color: black;
+            font-family: fantasy;
+        }
+        .question-nav-item.answered {
+            background-color: #ffc107;
+        }
+        .question-nav-item.unanswered {
+            background-color: #dc3545;
+        }
+        #submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #submit-btn:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .alert {
+            margin-top: 20px;
+        }
+        #video-preview {
+            display: block;
+            margin: 20px auto;
+        }
+        .question-nav-item.answered {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .error-messages p {
+            color: rgb(0, 0, 0)(61, 61, 61);
+            list-style-type: none;
+        }
+        .error-messages p::before {
+            content: "• ";
+            color: red;
+        }
+
+        #video-preview-container {
+            position: absolute;
+            top: 5%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .camera-error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="initialDiv" style="padding-top: 10%; text-align: center; position: relative; top: 0px;">
+        <h1>{{ exam_category.name }}</h1>
+        <br>
+        <button id="startButton" class="btn btn-primary" style="width: 200px; height: 50px; font-weight: bold;">Start Exam</button>
+        <br><br>
+        <h4 style="margin-top: 0px; margin-bottom: 0px;">Total 60 minutes Exam Time</h4>
+        <div style="float: left; text-align: justify; margin-left: 11px; margin-top: 30px;" class="error-messages">
+            <h3>Important Guidelines: Please Avoid the Following Actions</h3>
+            <p>Please refrain from refreshing the page, as doing so may cause interruptions in the process or result in unexpected errors.</p>
+            <p>Engaging in malpractice or attempting to bypass the system could lead to data corruption, security issues, or violations of the terms of service.</p>
+            <p>Switching tabs or windows during the operation may disrupt the current task, causing delays or loss of progress in the process.</p>
+            <p>Ensure that you fully understand and follow all guidelines provided to prevent errors or confusion during the process.</p>
+            <p>Using unsupported browsers or outdated versions could lead to compatibility issues, making certain features or processes fail to work correctly.</p>
+            <p>During processing, avoid performing unnecessary actions that may interfere with or slow down the ongoing task, ensuring smooth execution.</p>
+            <p>Always check for any ongoing system maintenance or updates that might affect the functionality or availability of certain services or features.</p>
+        </div>
+    </div>
+
+    <!-- Camera Permission Error Message -->
+    <div id="camera-error-message" class="camera-error-message" style="position: absolute; top: 10%;">
+        <p>Camera access denied. You cannot proceed without enabling the camera. Please click "OK" to retry.</p>
+        <button id="retry-camera-btn" class="btn btn-danger">Retry Camera Access</button>
+    </div>
+
+    <section class="exam-area section-padding" id="examSection" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div style="display: flex; justify-content: center; flex-direction: column-reverse;">
+                        <div>
+                            <p style="font-size: 30px; margin-bottom: 0px; margin-top: 0px; margin-left: 4px;" class="timer">Time End In  - 59:99</p>
+                        </div>
+                        <div>
+                            <h2 style="padding-top: 0px; margin-top: 0px; margin-bottom: 0px;" class="section-title" >Main Exam</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-lg-12">
+                        <div class="question-nav">
+                            {% for question in questions %}
+                            <a href="#" class="question-nav-item" data-id="{{ question.id }}" data-target="#question_{{ question.id }}" title="Question {{ forloop.counter }}">
+                                {{ forloop.counter }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                        <div class="question-cards">
+                            {% for question in questions %}
+                                <div class="question-card" id="question_{{ question.id }}">
+                                    <fieldset>
+                                        <legend>{{ question.question_text }}</legend>
+                                        {% for option in question.options.all %}
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="question_{{ question.id }}" value="{{ option.id }}" id="option_{{ option.id }}">
+                                                <label class="form-check-label" for="option_{{ option.id }}">{{ option.option }}</label>
+                                            </div>
+                                        {% endfor %}
+                                    </fieldset>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="button-parent" style="display: flex; gap: 5px; float: left; margin-left: 5px;">
+                            <button type="button" id="submit-btn">Submit</button>
+
+                            <div id="video-preview-container" style="display:none;">
+                                <video id="video-preview" width="320" height="240" autoplay muted></video>
+                            </div>
+
+                            <div id="recording-status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'web/dashboard/assets/js/main-exam.js' %}"></script>

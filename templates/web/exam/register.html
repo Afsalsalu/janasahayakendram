@@ -1,0 +1,299 @@
+{% extends "web/home/base.html" %}
+{% load static %}
+{% block content %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'web/dashboard/assets/css/register.css' %}">
+  <style>
+    .form-wrap {
+      position: relative;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .form-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("{% static 'web/file/images/logoSSC-blue.png' %}");
+      background-size: 300px;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.1; /* Lower the opacity for a more transparent image */
+      z-index: -1;
+    }
+
+    .form-wrap h4 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #284478;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      font-weight: 700;
+      color: #555;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 14px;
+      box-sizing: border-box;
+      margin-top: 8px;
+      background-color: transparent;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      border-color: #284478;
+      outline: none;
+      background-color: #ffffff;
+    }
+
+    .form-group .error {
+      font-size: 12px;
+      color: red;
+      margin-top: 5px;
+    }
+
+    .form-group select {
+      height: 45px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-right: 30px;
+    }
+
+    .form-group select:focus {
+      border-color: #284478;
+    }
+
+    .form-group button {
+      background-color: #284478;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .form-group button:hover {
+      background-color: #1d3a6c;
+    }
+
+    .form-group .has-error input, .form-group .has-error select {
+      border-color: red;
+    }
+
+    .form-group .has-error label {
+      color: red;
+    }
+
+    /* .container {
+      background-color: #284478;
+      padding: 50px 15px;
+    } */
+
+    .py-5 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .login-link {
+      color: #284478;
+      font-weight: bold;
+    }
+
+    .login-link:hover {
+      color: #1d3a6c;
+    }
+
+    #rzp-button {
+      background-color: #284478;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      /* margin-top: 20px; */
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #rzp-button:hover {
+      background-color: #041678;
+    }
+
+    .labal-star{
+      color: red;
+    }
+  </style>
+
+  <div style="background-color: #284478">
+
+
+<div class="container" >
+    <div class="py-5"></div>
+
+    <div class="form-wrap"> 
+        <h4 id="title" class="text-center py-3">Register New User</h4>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <!-- First Row -->
+          <div class="row mb-3">
+              <div class="col-md-6 form-group{% if form.name.errors %} has-error{% endif %}">
+                <label for="">Name (As per govt. ID Proof) <span class="labal-star">*</span></label>
+                  {{ form.name }}
+                  {% if form.name.errors %}
+                      <span class="error">{{ form.name.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+              <div class="col-md-6 form-group{% if form.photo.errors %} has-error{% endif %}">
+                <label for="">Upload Photo <span class="labal-star">*</span></label>
+                  {{ form.photo }}
+                  {% if form.photo.errors %}
+                      <span class="error">{{ form.photo.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+          </div>
+          <!-- Second Row -->
+          <div class="row mb-3">
+              <div class="col-md-6 form-group{% if form.email.errors %} has-error{% endif %}">
+                <label for="">Email <span class="labal-star">*</span></label>
+                  {{ form.email }}
+                  {% if form.email.errors %}
+                      <span class="error">{{ form.email.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+              <div class="col-md-6 form-group{% if form.mobile.errors %} has-error{% endif %}">
+                <label for="">Mobile <span class="labal-star">*</span></label>
+                  {{ form.mobile }}
+                  {% if form.mobile.errors %}
+                      <span class="error">{{ form.mobile.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+          </div>
+          <!-- Third Row -->
+          <div class="row mb-3">
+              <div class="col-md-6 form-group{% if form.another_name.errors %} has-error{% endif %}">
+                <label for="">Father's/Mother's/Spouse's Name <span class="labal-star">*</span></label>
+                  {{ form.another_name }}
+                  {% if form.another_name.errors %}
+                      <span class="error">{{ form.another_name.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="state">State <span class="labal-star">*</span></label>
+                <select name="state" id="state">
+                  <option value="">Select State</option>
+                  {% for state in states %}
+                      <option value="{{ state.id }}" {% if state.id == selected_state %}selected{% endif %}>
+                          {{ state.name }}
+                      </option>
+                  {% endfor %}
+              </select>
+
+            </div>
+          </div>
+          <!-- Fourth Row -->
+          <div class="row mb-3">
+
+            <div class="col-md-6 form-group">
+              <label for="district">District <span class="labal-star">*</span></label>
+              <select name="district" id="district">
+                <option value="">Select District</option>
+                {% for district in districts %}
+                    <option value="{{ district.id }}" {% if district.id == form.district.value %}selected{% endif %}>
+                        {{ district.district_name }}
+                    </option>
+                {% endfor %}
+            </select>
+        
+          </div>
+          <div class="col-md-6 form-group{% if form.panchayat.errors %} has-error{% endif %}">
+            <label for="panchayat">Panchayat/Municipality/Corporations<span class="labal-star">*</span></label>
+            <select id="panchayat" name="panchayat" required>
+                <option hidden>Select Panchayat</option>
+            </select>
+        </div>
+        <div class="col-md-6 form-group{% if form.address.errors %} has-error{% endif %}" >
+          <label for="">ward Number<span class="labal-star">*</span></label>
+            {{ form.address }}
+            {% if form.address.errors %}
+                <span class="error">{{ form.address.errors|striptags }}</span>
+            {% endif %}
+        </div>
+              <div class="col-md-6 form-group{% if form.gender.errors %} has-error{% endif %}">
+                <label for="">Gender (As per govt. ID Proof) <span class="labal-star">*</span></label>
+                  {{ form.gender }}
+                  {% if form.gender.errors %}
+                      <span class="error">{{ form.gender.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+              <div class="col-md-6 form-group{% if form.name.errors %} has-error{% endif %}">
+                <label for="">Adhar Number<span class="labal-star">*</span></label>
+                  {{ form.name }}
+                  {% if form.name.errors %}
+                      <span class="error">{{ form.name.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+              <div class="col-md-6 form-group{% if form.photo.errors %} has-error{% endif %}">
+                <label for="">Cheque Leaf/Pass Book <span class="labal-star">*</span></label>
+                  {{ form.photo }}
+                  {% if form.photo.errors %}
+                      <span class="error">{{ form.photo.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+          </div>
+
+          <!-- Fifth Row -->
+          <div class="row mb-3">
+            <div class="col-md-6 form-group{% if form.date_of_birth.errors %} has-error{% endif %}">
+              <label for="">D.O.B (As per govt. ID Proof) <span class="labal-star">*</span></label>
+                {{ form.date_of_birth }}
+                {% if form.date_of_birth.errors %}
+                    <span class="error">{{ form.date_of_birth.errors|striptags }}</span>
+                {% endif %}
+            </div>
+
+              <div class="col-md-6 form-group{% if form.address.errors %} has-error{% endif %}" >
+                <label for="">Address <span class="labal-star">*</span></label>
+                  {{ form.address }}
+                  {% if form.address.errors %}
+                      <span class="error">{{ form.address.errors|striptags }}</span>
+                  {% endif %}
+              </div>
+          </div>
+          <button  id="rzp-button" type="submit" class="buttonF">Register & Pay</button><br>
+          <a href="https://sscegov.com/"> <button type="submit" class="buttonF">Register & Pay link</button> </a>
+            <!-- <a href="https://rzp.io/rzp/Sh76yug"> <button type="submit" class="buttonF">Register & Pay link</button> </a> -->
+
+      </form>
+      <p>Already registered? <a href="{% url 'exam:entrepreneur_userlogin' %}">Login </a>to your account.</p>
+    </div>  
+<div class="py-5"></div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'web/dashboard/assets/js/checkout.js' %}"></script>
+
+
+
+<script src="{% static 'web/dashboard/assets/js/exam-register.js' %}"></script>
+
+<!-- JavaScript to populate districts based on the selected state -->
+
+{% endblock %}
