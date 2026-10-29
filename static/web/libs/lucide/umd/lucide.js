@@ -18360,4 +18360,3 @@
   exports.icons = iconAndAliases;
 
 }));
-//# sourceMappingURL=lucide.js.map
