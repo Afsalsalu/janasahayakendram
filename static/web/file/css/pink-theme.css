@@ -3762,7 +3762,6 @@ span.sm-info {
 #hero-17 {
   text-align: center;
   padding-top: 170px;
-  background-image: url(../images/hero-17.jpg);
   background-position: top center;
 }
 
@@ -9292,12 +9291,10 @@ img.footer-logo-dark {
 }
 
 #login .register-page-wrapper {
-  background: url(../images/login-wrapper.jpg);
   background-position: left top;
 }
 
 #signup .register-page-wrapper {
-  background: url(../images/login-wrapper.jpg);
   background-position: right center;
 }
 
@@ -9727,7 +9724,6 @@ img.footer-logo-dark {
 }
 
 #modal-3.modal .bg-img {
-  background: url(../images/modal-request.jpg);
   background-position: left center;  
 }
 
@@ -10483,7 +10479,6 @@ body.theme--dark {
 }
 
 .theme--dark #hero-17 {
-  background-image: url(../images/hero-17-dark.jpg);
 }
 
 .theme--dark #hero-18:after {

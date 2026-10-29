@@ -18885,7 +18885,6 @@ h6 {
 
 [type=checkbox]:checked {
     background-repeat: no-repeat;
-    background-image: url(../images/check-arrow.svg);
     background-size: .9rem .9rem;
     background-position: 50%
 }
@@ -26625,15 +26624,12 @@ div.flatpickr-day.dataTables_scrollBody>table.dataTable>:is(thead>tr>th, thead>t
 }
 
 .bg-\[url\(\'\.\.\/images\/hr-dashboard\.png\'\)\] {
-    background-image: url(../images/hr-dashboard.png)
 }
 
 .bg-\[url\(\'\.\.\/images\/product\/bg\.png\'\)\] {
-    background-image: url(../images/bg.png)
 }
 
 .bg-\[url\(\'\.\.\/images\/product\/cta-2\.png\'\)\] {
-    background-image: url(../images/cta-2.png)
 }
 
 .bg-\[url\(\'https\:\/\/cdn\.dribbble\.com\/userupload\/3012253\/file\/original-dd6cf163ea8f5617304d9d41f6ff38e7\.png\?resize\=1024x768\'\)\] {
@@ -26641,7 +26637,6 @@ div.flatpickr-day.dataTables_scrollBody>table.dataTable>:is(thead>tr>th, thead>t
 }
 
 .bg-auth-pattern {
-    background-image: url(../images/auth-bg.jpg)
 }
 
 .bg-gradient-to-b {
@@ -33493,7 +33488,6 @@ td.gridjs-td:last-child {
 }
 
 :is([data-mode=dark] .dark\:bg-auth-pattern-dark) {
-    background-image: url(../images/auth-bg-dark.jpg)
 }
 
 :is([data-mode=dark] .dark\:from-custom-950) {

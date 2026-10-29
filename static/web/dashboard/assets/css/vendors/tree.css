@@ -481,7 +481,6 @@
   background-position: -4px -4px;
 }
 .jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../../images/tree/throbber.gif) center center no-repeat;
 }
 .jstree-default > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -666,7 +665,6 @@
   background-size: auto 36px;
 }
 .jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../../images/tree/throbber.gif) center center no-repeat;
 }
 .jstree-default-small > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -811,7 +809,6 @@
   background-size: auto 64px;
 }
 .jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../../images/tree/throbber.gif) center center no-repeat;
 }
 .jstree-default-large > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -1100,7 +1097,6 @@
   background-repeat: no-repeat;
   background-color: transparent;
   color: #333;
-  background-image: url(../../images/tree/32px.png);
   color: #777;
 }
 
@@ -1713,7 +1709,6 @@
   background-size: auto 36px;
 }
 .jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../../images/tree/throbber.gif) center center no-repeat;
 }
 .jstree-default-small > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -1858,7 +1853,6 @@
   background-size: auto 64px;
 }
 .jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../../images/tree/throbber.gif) center center no-repeat;
 }
 .jstree-default-large > .jstree-container-ul > .jstree-node {
   margin-left: 0;

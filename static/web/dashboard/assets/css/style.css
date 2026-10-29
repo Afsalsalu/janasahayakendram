@@ -7069,7 +7069,6 @@ button.button-primary:hover {
 
 .social-profile {
   text-align: center;
-  background-image: url(../images/dashboard-3/profile-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -7506,12 +7505,10 @@ td.highlight {
 }
 
 td.details-control {
-  background: url("../images/details_open.png") no-repeat center center;
   cursor: pointer;
 }
 
 tr.shown td.details-control {
-  background: url("../images/details_close.png") no-repeat center center;
 }
 
 .dataTables_scroll ~ .dataTables_paginate {
@@ -9515,7 +9512,6 @@ textarea {
   margin: auto;
 }
 .avatar-upload div:first-child .avatar-preview > div {
-  background-image: url("../images/forms/user.png");
   width: 100%;
   height: 100%;
   border-radius: 100%;
@@ -12785,7 +12781,6 @@ textarea {
 }
 
 .default-square .form-switch .form-check-input {
-  background-image: url(../images/switch/square-gray.png);
 }
 .default-square .form-switch .form-check-input:checked {
   background-image: url(https://admin.pixelstrap.net/riho/assets/images/switch/square.svg);
@@ -17152,7 +17147,6 @@ p.data-attributes svg {
 }
 
 .left-msg .msg-img {
-  background-image: url(../images/blog/4.jpg);
   width: 33px;
   height: 33px;
 }
@@ -17191,7 +17185,6 @@ p.data-attributes svg {
 }
 .right-msg .msg-img {
   margin: 0 0 0 10px;
-  background-image: url(../images/blog/comment.jpg);
   width: 33px;
   height: 33px;
 }
@@ -17618,7 +17611,6 @@ p.data-attributes svg {
     3.7 Comingsoon CSS Start
 ==========================**/
 .comingsoon-bgimg {
-  background: url(../images/other-images/coming-soon-bg.jpg);
   background-position: bottom;
   background-size: cover;
 }
@@ -18006,7 +17998,6 @@ p.data-attributes svg {
 }
 
 .balance-widget {
-  background-image: url(../images/dashboard-2/balance-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -19388,7 +19379,6 @@ p.data-attributes svg {
   height: 5%;
 }
 .add-project-link .categories {
-  background-image: url("../images/dashboard-2/dashboard-banner.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
@@ -19799,7 +19789,6 @@ p.data-attributes svg {
   }
 }
 .project-ideas-card .project-card {
-  background-image: url(../images/dashboard-2/office-work.gif);
   background-size: contain;
   height: 100%;
   width: 100%;
@@ -22127,7 +22116,6 @@ p.data-attributes svg {
 }
 
 .special-Offer {
-  background-image: url(../images/dashboard/Banner.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 363px;
@@ -26417,7 +26405,6 @@ footer.blockquote-footer {
   text-align: center;
 }
 .error-wrapper.maintenance-bg {
-  background-image: url(../images/other-images/maintenance-bg.jpg);
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: overlay;
 }
@@ -29918,7 +29905,6 @@ html:hover .cursor {
   overflow: hidden;
   background-size: cover;
   height: 1060px;
-  background-image: url(../images/landing/demo-bg.png);
 }
 .landing-home .sub-title {
   font-size: calc(18px + 12 * (100vw - 300px) / 1620);
@@ -31206,7 +31192,6 @@ footer .license-list h6 {
   }
 }
 .landing-footer {
-  background-image: url(../images/landing/bg-footer.png);
   background-size: cover;
 }
 .landing-footer .footer-contain {
@@ -32428,7 +32413,6 @@ footer .license-list h6 {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  background: url("../images/login/login_bg.jpg");
   background-position: center;
   padding: 30px 12px;
 }
@@ -34149,7 +34133,6 @@ html {
     3.37 Social-app CSS start
 ==========================**/
 .user-profile .hovercard .socialheader {
-  background: url(../images/social-app/social-image.png);
 }
 .user-profile .hovercard .user-image .share-icons {
   position: absolute;
@@ -35549,7 +35532,6 @@ html {
   margin: 30px 0;
 }
 .user-profile .hovercard .cardheader {
-  background: url(../images/other-images/bg-profile.png);
   background-size: cover;
   background-position: 10%;
   height: 470px;
@@ -42624,7 +42606,6 @@ table.table-bordered thead tr th p {
 }
 
 .iti--allow-dropdown .iti__flag {
-  background-image: url("../images/forms/flags.png");
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -45321,7 +45302,6 @@ table.table-bordered thead tr th p {
   }
 }
 .page-wrapper.material-type .page-body-wrapper {
-  background-image: url(../images/other-images/boxbg.jpg);
   background-blend-mode: overlay;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -48792,7 +48772,6 @@ html[dir=rtl] body.dark-only .page-wrapper .page-body-wrapper .page-body .card:n
   5.9 Box-layout CSS start
 ==========================**/
 .box-layout {
-  background-image: url(../images/other-images/boxbg.jpg);
   background-blend-mode: overlay;
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
