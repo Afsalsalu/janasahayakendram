@@ -410,7 +410,7 @@ class CentreUserAccount(models.Model):
     jsk_number = models.CharField(max_length=50, unique=True, null=True, blank=True)
     pan_co_mun = models.CharField(max_length=255, blank=True, null=True)
     certificate_downloaded = models.BooleanField(default=False)
-    location = models.TextField()
+    location = models.CharField(max_length=191, unique=True)
 
     def __str__(self):
         return self.owner_centre

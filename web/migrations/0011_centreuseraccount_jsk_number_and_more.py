@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='centreuseraccount',
             name='location',
-            field=models.TextField(),
+            field=models.CharField(max_length=191, unique=True),
         ),
     ]
